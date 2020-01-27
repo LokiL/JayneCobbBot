@@ -30,7 +30,21 @@ logger.add("Cobb.log", rotation="1 MB", enqueue=True)
 restart_flag = False
 
 
+class Users(Model):
+    user_id = CharField()
+    chat_id = IntegerField()
+    first_join = DateField()
+    warn_count = IntegerField()
+    custom_title = CharField()
+    is_boss = BooleanField()
+    karma = IntegerField()
+
+    class Meta:
+        database = db
+
+
 class MessageLog(Model):
+    owner = ForeignKeyField(Users, related_name='messages')
     message_id = IntegerField()
     message_date = IntegerField()
     message_text = CharField()
@@ -58,19 +72,6 @@ class MessageLog(Model):
 
     class Meta:
         database = db_messages
-
-
-class Users(Model):
-    user_id = CharField()
-    chat_id = IntegerField()
-    first_join = DateField()
-    warn_count = IntegerField()
-    custom_title = CharField()
-    is_boss = BooleanField()
-    karma = IntegerField()
-
-    class Meta:
-        database = db
 
 
 class Chats(Model):
@@ -211,7 +212,8 @@ def log_chat_message(message, marked_to_delete=False):
         else:
             mod_command = False
 
-        log_entry = {'message_id': message.message_id, 'message_date': message.date, 'message_text': message.text,
+        log_entry = {'owner': message.from_user.id, 'message_id': message.message_id, 'message_date': message.date,
+                     'message_text': message.text,
                      'chat_id': message.chat.id, 'chat_title': message.chat.title,
                      'chat_username': message.chat.username, 'from_user_id': message.from_user.id,
                      'from_user_is_bot': message.from_user.is_bot, 'from_user_username': message.from_user.username,
@@ -338,6 +340,50 @@ def bot_whois(message):
                                                   warn_count=subquery.warn_count)
 
         clean(Cobb.reply_to(message, whois_info))
+
+
+@Cobb.message_handler(commands=['message_top'])
+@logger.catch
+def bot_message_top(message):
+    add_new_user(message)
+    clean(message)
+    cid = message.chat.id
+    top_all = "Топ сообщений у пользователей за все время:\n"
+    top_month = "Топ сообщений у пользователей за месяц:\n"
+    top_users = {}
+
+    for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
+            MessageLog.chat_id == cid).distinct():
+        top_users[unique_users.from_user_username] = MessageLog.select().where(
+            (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
+    iter = 1
+    for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
+        if iter == 6:
+            break
+        top_all += "%s. @%s - %s\n" % (iter, key, value)
+        iter += 1
+    print(top_all)
+
+    top_users = {}
+    for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
+            (MessageLog.chat_id == cid) & (
+                    MessageLog.message_date > int(
+                time.time()) - 2629743)).distinct():
+        top_users[unique_users.from_user_username] = MessageLog.select().where(
+            (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
+    iter = 1
+    for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
+        if iter == 6:
+            break
+        top_month += "%s. @%s - %s\n" % (iter, key, value)
+        iter += 1
+    print(top_month)
+        # print(unique_users.from_user_id)
+        # print(unique_users.from_user_username)
+        # print(MessageLog.select().where((MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count())
+
+    # for user_id, user_name in potential_top.items():
+    #     print('%s - %s' % (user_name, MessageLog.select().where((MessageLog.chat_id == cid) & (MessageLog.from_user_id == user_id)).count()))
 
 
 @Cobb.message_handler(content_types=['voice'])
