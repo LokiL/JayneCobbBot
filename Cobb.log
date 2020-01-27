@@ -1,0 +1,1049 @@
+2020-01-23 17:31:40.844 | INFO     | __main__:add_new_user_or_update_msg_count:258 - User @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:31:40.852 | INFO     | __main__:add_new_user_or_update_msg_count:258 - User @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:31:41.168 | INFO     | __main__:add_new_chat_or_change_info:287 - New chat [18+] Озверевший Afterdark (-1001457973105) added to database
+2020-01-23 17:31:41.179 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:31:41.232 | INFO     | __main__:add_new_chat_or_change_info:287 - New chat [18+] Озверевший Afterdark (-1001457973105) added to database
+2020-01-23 17:31:43.340 | INFO     | __main__:add_new_user_or_update_msg_count:258 - User @Vit_X (95263939) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:31:46.160 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:31:48.579 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:31:50.674 | INFO     | __main__:clean:107 - Message 342 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:31:50.685 | INFO     | __main__:add_new_user_or_update_msg_count:258 - User @niohisi (24978372) in chat что-то 1 (-1001171657825) added to db
+2020-01-23 17:32:02.193 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:32:05.728 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:32:06.011 | INFO     | __main__:add_new_chat_or_change_info:287 - New chat что-то 1 (-1001171657825) added to database
+2020-01-23 17:32:08.762 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:32:17.079 | INFO     | __main__:add_new_user_or_update_msg_count:258 - User @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) added to db
+2020-01-23 17:32:20.955 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:32:22.791 | INFO     | __main__:clean:107 - Message 347 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:32:22.797 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:32:23.314 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.226 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.232 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:33:21.246 | INFO     | __main__:add_new_user_or_update_msg_count:257 - User @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:33:21.260 | INFO     | __main__:add_new_user_or_update_msg_count:257 - User @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:33:21.285 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.297 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.305 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.328 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.341 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.351 | INFO     | __main__:clean:107 - Message 349 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:33:21.357 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:33:21.361 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:33:21.741 | INFO     | __main__:clean:107 - Message 350 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:33:21.746 | INFO     | __main__:add_new_user_or_update_msg_count:265 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:34:22.523 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:34:22.528 | INFO     | __main__:add_new_user_or_update_msg_count:258 - User @Skyerwolfy (236514001) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:34:22.541 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:34:22.552 | INFO     | __main__:clean:107 - Message 351 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:34:22.557 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:34:23.024 | INFO     | __main__:clean:107 - Message 352 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:34:23.034 | INFO     | __main__:add_new_user_or_update_msg_count:266 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:34:32.005 | INFO     | __main__:add_new_user_or_update_msg_count:258 - User @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:45:46.284 | INFO     | __main__:add_new_user_or_update_msg_count:270 - User @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:45:46.299 | INFO     | __main__:add_new_user_or_update_msg_count:270 - User @Shaman_sky (374433033) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:45:46.407 | INFO     | __main__:add_new_user_or_update_msg_count:270 - User @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:45:46.426 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:45:46.435 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Shaman_sky (374433033) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:45:46.467 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:45:46.472 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:45:46.479 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Shaman_sky (374433033) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:45:46.484 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Vit_X (95263939) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:45:46.500 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:46:03.404 | INFO     | __main__:clean:107 - Message 353 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:46:03.412 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:46:03.798 | INFO     | __main__:clean:107 - Message 354 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:46:03.805 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:46:13.487 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:46:20.267 | INFO     | __main__:clean:107 - Message 355 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:46:20.405 | INFO     | __main__:clean:107 - Message 356 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:46:20.412 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:46:36.116 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:46:37.120 | INFO     | __main__:clean:107 - Message 357 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:46:37.127 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:46:37.489 | INFO     | __main__:clean:107 - Message 358 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:46:37.496 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:46:44.830 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:46:46.620 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:47:01.872 | INFO     | __main__:add_new_user_or_update_msg_count:278 - Message count for  @Vit_X (95263939) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:47:31.127 | INFO     | __main__:clean:107 - Message 360 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:47:31.134 | INFO     | __main__:add_new_user_or_update_msg_count:280 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:47:31.640 | INFO     | __main__:clean:107 - Message 361 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:47:31.647 | INFO     | __main__:add_new_user_or_update_msg_count:280 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:49:48.023 | INFO     | __main__:add_new_user_or_update_msg_count:285 - Message count for  @Shaman_sky (374433033) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:49:48.028 | INFO     | __main__:add_new_user_or_update_msg_count:285 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:49:48.040 | INFO     | __main__:add_new_user_or_update_msg_count:277 - User @Marihuanich (180031546) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:49:48.454 | INFO     | __main__:add_new_chat_or_change_info:306 - New chat Озверевшая Столица [SFW] (-1001485796071) added to database
+2020-01-23 17:49:59.451 | INFO     | __main__:clean:107 - Message 362 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:49:59.455 | INFO     | __main__:add_new_user_or_update_msg_count:285 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:49:59.789 | ERROR    | __main__:<module>:377 - 'ChatMember' object has no attribute 'first_name'
+Traceback (most recent call last):
+
+> File "C:/Users/user/PycharmProjects/Jayne/main.py", line 375, in <module>
+    Cobb.polling(none_stop=True)
+    |    -> <function TeleBot.polling at 0x0319A930>
+    -> <telebot.TeleBot object at 0x03227E50>
+
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\__init__.py", line 389, in polling
+    self.__threaded_polling(none_stop, interval, timeout)
+    |                       |          |         -> 20
+    |                       |          -> 0
+    |                       -> True
+    -> <telebot.TeleBot object at 0x03227E50>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\__init__.py", line 413, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    |    |           -> <function ThreadPool.raise_exceptions at 0x0318B7C8>
+    |    -> <telebot.util.ThreadPool object at 0x03227DD0>
+    -> <telebot.TeleBot object at 0x03227E50>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\util.py", line 108, in raise_exceptions
+    six.reraise(self.exc_info[0], self.exc_info[1], self.exc_info[2])
+    |   |       |    |            |    |            |    -> (<class 'AttributeError'>, AttributeError("'ChatMember' object has no attribute 'first_name'"), <traceback object at 0x0366F7...
+    |   |       |    |            |    |            -> <telebot.util.ThreadPool object at 0x03227DD0>
+    |   |       |    |            |    -> (<class 'AttributeError'>, AttributeError("'ChatMember' object has no attribute 'first_name'"), <traceback object at 0x0366F7...
+    |   |       |    |            -> <telebot.util.ThreadPool object at 0x03227DD0>
+    |   |       |    -> (<class 'AttributeError'>, AttributeError("'ChatMember' object has no attribute 'first_name'"), <traceback object at 0x0366F7...
+    |   |       -> <telebot.util.ThreadPool object at 0x03227DD0>
+    |   -> <function reraise at 0x0134F228>
+    -> <module 'six' from 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\six.py'>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\six.py", line 693, in reraise
+    raise value
+          -> None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+    |     |       -> {}
+    |     -> (<telebot.types.Message object at 0x03306EB0>,)
+    -> <function whois at 0x032752B8>
+
+  File "C:/Users/user/PycharmProjects/Jayne/main.py", line 158, in whois
+    "Варны: {warn_count}".format(first_name=requested_user.first_name,
+                                            -> <telebot.types.ChatMember object at 0x0331AC30>
+
+AttributeError: 'ChatMember' object has no attribute 'first_name'
+2020-01-23 17:51:05.325 | INFO     | __main__:clean:107 - Message 363 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:51:05.333 | INFO     | __main__:add_new_user_or_update_msg_count:285 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:51:05.673 | ERROR    | __main__:<module>:377 - 'User' object has no attribute 'nickname'
+Traceback (most recent call last):
+
+> File "C:/Users/user/PycharmProjects/Jayne/main.py", line 375, in <module>
+    Cobb.polling(none_stop=True)
+    |    -> <function TeleBot.polling at 0x0318A930>
+    -> <telebot.TeleBot object at 0x03218E50>
+
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\__init__.py", line 389, in polling
+    self.__threaded_polling(none_stop, interval, timeout)
+    |                       |          |         -> 20
+    |                       |          -> 0
+    |                       -> True
+    -> <telebot.TeleBot object at 0x03218E50>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\__init__.py", line 413, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+    |    |           -> <function ThreadPool.raise_exceptions at 0x0311B7C8>
+    |    -> <telebot.util.ThreadPool object at 0x03218DD0>
+    -> <telebot.TeleBot object at 0x03218E50>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\util.py", line 108, in raise_exceptions
+    six.reraise(self.exc_info[0], self.exc_info[1], self.exc_info[2])
+    |   |       |    |            |    |            |    -> (<class 'AttributeError'>, AttributeError("'User' object has no attribute 'nickname'"), <traceback object at 0x0382F8C8>)
+    |   |       |    |            |    |            -> <telebot.util.ThreadPool object at 0x03218DD0>
+    |   |       |    |            |    -> (<class 'AttributeError'>, AttributeError("'User' object has no attribute 'nickname'"), <traceback object at 0x0382F8C8>)
+    |   |       |    |            -> <telebot.util.ThreadPool object at 0x03218DD0>
+    |   |       |    -> (<class 'AttributeError'>, AttributeError("'User' object has no attribute 'nickname'"), <traceback object at 0x0382F8C8>)
+    |   |       -> <telebot.util.ThreadPool object at 0x03218DD0>
+    |   -> <function reraise at 0x02BF1228>
+    -> <module 'six' from 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\six.py'>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\six.py", line 693, in reraise
+    raise value
+          -> None
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+    |     |       -> {}
+    |     -> (<telebot.types.Message object at 0x032E5CF0>,)
+    -> <function whois at 0x032C5348>
+
+  File "C:/Users/user/PycharmProjects/Jayne/main.py", line 160, in whois
+    nickname=requested_user.user.nickname,
+             |              -> <telebot.types.User object at 0x032F8E70>
+             -> <telebot.types.ChatMember object at 0x032F8D30>
+
+AttributeError: 'User' object has no attribute 'nickname'
+2020-01-23 17:51:08.079 | INFO     | __main__:add_new_user_or_update_msg_count:277 - User @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:51:18.872 | INFO     | __main__:add_new_user_or_update_msg_count:285 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:51:18.879 | INFO     | __main__:add_new_user_or_update_msg_count:277 - User @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:51:22.200 | INFO     | __main__:clean:107 - Message 364 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:51:22.207 | INFO     | __main__:add_new_user_or_update_msg_count:285 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:51:22.723 | INFO     | __main__:clean:107 - Message 365 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:51:22.730 | INFO     | __main__:add_new_user_or_update_msg_count:285 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:51:41.659 | INFO     | __main__:clean:107 - Message 366 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:51:41.664 | INFO     | __main__:add_new_user_or_update_msg_count:284 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:51:42.132 | INFO     | __main__:clean:107 - Message 367 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:51:42.139 | INFO     | __main__:add_new_user_or_update_msg_count:284 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:51:48.314 | INFO     | __main__:clean:107 - Message 368 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:51:48.322 | INFO     | __main__:add_new_user_or_update_msg_count:284 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:51:48.791 | INFO     | __main__:clean:107 - Message 369 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:51:48.798 | INFO     | __main__:add_new_user_or_update_msg_count:284 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:52:19.667 | INFO     | __main__:clean:107 - Message 370 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:20.070 | INFO     | __main__:clean:107 - Message 371 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:20.081 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @niohisi (24978372) in chat что-то 1 (-1001171657825) added to db
+2020-01-23 17:52:24.416 | INFO     | __main__:clean:107 - Message 372 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:24.711 | INFO     | __main__:clean:107 - Message 373 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:24.719 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:52:27.216 | INFO     | __main__:clean:107 - Message 374 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:27.454 | INFO     | __main__:clean:107 - Message 375 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:27.461 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:52:31.022 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:52:31.368 | INFO     | __main__:add_new_chat_or_change_info:304 - New chat что-то 1 (-1001171657825) added to database
+2020-01-23 17:52:32.900 | INFO     | __main__:clean:107 - Message 377 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:33.180 | INFO     | __main__:clean:107 - Message 378 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:52:33.187 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:52:33.654 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:52:33.774 | INFO     | __main__:add_new_chat_or_change_info:304 - New chat [18+] Озверевший Afterdark (-1001457973105) added to database
+2020-01-23 17:53:06.970 | INFO     | __main__:add_new_user_or_update_msg_count:282 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:53:22.799 | INFO     | __main__:add_new_user_or_update_msg_count:274 - User @CurtissRac (452661231) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:53:32.672 | INFO     | __main__:add_new_user_or_update_msg_count:282 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:53:33.472 | INFO     | __main__:add_new_user_or_update_msg_count:274 - User @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:53:33.900 | INFO     | __main__:add_new_chat_or_change_info:303 - New chat Озверевшая Столица [SFW] (-1001485796071) added to database
+2020-01-23 17:53:41.959 | INFO     | __main__:add_new_user_or_update_msg_count:282 - Message count for  @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:53:53.532 | INFO     | __main__:add_new_user_or_update_msg_count:282 - Message count for  @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:54:06.463 | INFO     | __main__:clean:107 - Message 379 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:54:06.470 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 17:54:06.970 | INFO     | __main__:clean:107 - Message 380 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 17:54:15.229 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:54:20.384 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:54:27.929 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:54:29.181 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:54:30.183 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:54:44.091 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:54:52.296 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @Vit_X (95263939) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 17:55:00.060 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:55:03.120 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:55:08.476 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:55:10.431 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:55:22.889 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Vit_X (95263939) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:55:24.303 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:55:38.587 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:55:45.753 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @JrikCheetah (209669926) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 17:55:46.888 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:55:51.454 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:56:19.493 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Vit_X (95263939) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:56:38.451 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @CurtissRac (452661231) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:56:55.480 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 17:57:02.235 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:57:05.221 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:57:20.366 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @JrikCheetah (209669926) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:57:26.568 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @typicalnewbie (179740148) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:57:36.837 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:58:57.775 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @JrikCheetah (209669926) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 17:59:25.200 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @JrikCheetah (209669926) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:08:10.159 | INFO     | __main__:clean:107 - Message 381 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:08:10.167 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:08:10.827 | INFO     | __main__:clean:107 - Message 382 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:09:32.914 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:10:13.057 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @Shaman_sky (374433033) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 18:23:34.056 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 18:23:34.074 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @Magenta7 (197515902) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 18:23:34.090 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 18:23:34.111 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 18:23:34.161 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 18:23:58.284 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 18:24:17.203 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:24:59.514 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) added to db
+2020-01-23 18:25:27.249 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:25:35.477 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:27:54.505 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:28:06.311 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:28:21.318 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:28:48.994 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:29:00.724 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:29:04.312 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:29:52.799 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:30:01.343 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:30:10.218 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:30:21.096 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:31:02.438 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 18:34:19.038 | INFO     | __main__:clean:107 - Message 418 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:34:19.509 | INFO     | __main__:clean:107 - Message 419 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:34:26.417 | INFO     | __main__:clean:107 - Message 420 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:34:26.548 | INFO     | __main__:clean:107 - Message 421 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:34:31.127 | INFO     | __main__:clean:107 - Message 422 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:34:31.263 | INFO     | __main__:clean:107 - Message 423 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:36:23.720 | INFO     | __main__:clean:107 - Message 424 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:36:23.728 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:36:24.192 | INFO     | __main__:clean:107 - Message 425 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:36:38.872 | INFO     | __main__:clean:107 - Message 426 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:36:39.108 | INFO     | __main__:clean:107 - Message 427 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:37:24.112 | INFO     | __main__:clean:107 - Message 428 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:37:24.617 | INFO     | __main__:clean:107 - Message 429 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:39:30.382 | INFO     | __main__:add_new_user_or_update_msg_count:275 - User @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 18:41:59.005 | INFO     | __main__:add_new_user_or_update_msg_count:283 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:47:08.560 | INFO     | __main__:add_new_user_or_update_msg_count:137 - User @Melnax (127493928) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 18:53:39.304 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:53:39.308 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 18:53:39.330 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Melnax (127493928) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:53:39.333 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:53:39.347 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:53:39.365 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Iam_Zozo (511142888) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 18:53:39.379 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:53:39.401 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Iam_Zozo (511142888) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 18:53:50.493 | ERROR    | telebot.util:run:59 - An error has been caught in function 'run', process 'MainProcess' (6020), thread 'WorkerThread1' (7400):
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\peewee.py", line 6191, in _normalize_data
+    normalized[cls._meta.combined[key]] = kwargs[key]
+    |          |   |     |        |       |      -> 'title'
+    |          |   |     |        |       -> {'title': 'тест'}
+    |          |   |     |        -> 'title'
+    |          |   |     -> {'id': <AutoField: Users.id>, 'user_id': <CharField: Users.user_id>, 'chat_id': <IntegerField: Users.chat_id>, 'first_join': ...
+    |          |   -> <peewee.Metadata object at 0x03242770>
+    |          -> <Model: Users>
+    -> {}
+
+KeyError: 'title'
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 885, in _bootstrap
+    self._bootstrap_inner()
+    |    -> <function Thread._bootstrap_inner at 0x02BA0C48>
+    -> <WorkerThread(WorkerThread1, started daemon 7400)>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+    |    -> <function WorkerThread.run at 0x0318C540>
+    -> <WorkerThread(WorkerThread1, started daemon 7400)>
+> File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+    |     |       -> {}
+    |     -> (<telebot.types.Message object at 0x03224EB0>,)
+    -> <function bot_set_user_title at 0x03286A98>
+
+  File "C:/Users/user/PycharmProjects/Jayne/main.py", line 406, in bot_set_user_title
+    updated_user = Users.update(title=set_title[1]).where((Users.user_id == uid) & (Users.chat_id == cid))
+                   |     |            |                    |     |          |       |     |          -> -1001171657825
+                   |     |            |                    |     |          |       |     -> <peewee.FieldAccessor object at 0x0320D910>
+                   |     |            |                    |     |          |       -> <Model: Users>
+                   |     |            |                    |     |          -> 24978372
+                   |     |            |                    |     -> <peewee.FieldAccessor object at 0x032426F0>
+                   |     |            |                    -> <Model: Users>
+                   |     |            -> ['/title', 'тест']
+                   |     -> <classmethod object at 0x0133DAB0>
+                   -> <Model: Users>
+
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\peewee.py", line 6198, in update
+    return ModelUpdate(cls, cls._normalize_data(__data, update))
+           |           |    |   |                       -> {'title': 'тест'}
+           |           |    |   -> <classmethod object at 0x0133DA90>
+           |           |    -> <Model: Users>
+           |           -> <Model: Users>
+           -> <class 'peewee.ModelUpdate'>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\peewee.py", line 6193, in _normalize_data
+    normalized[getattr(cls, key)] = kwargs[key]
+    |                  |    |       |      -> 'title'
+    |                  |    |       -> {'title': 'тест'}
+    |                  |    -> 'title'
+    |                  -> <Model: Users>
+    -> {}
+
+AttributeError: type object 'Users' has no attribute 'title'
+2020-01-23 18:54:11.613 | INFO     | __main__:clean:110 - Message 432 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:54:16.977 | INFO     | __main__:clean:110 - Message 433 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:54:16.985 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:54:17.232 | INFO     | __main__:clean:110 - Message 434 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:54:25.596 | INFO     | __main__:clean:110 - Message 436 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:54:34.730 | INFO     | __main__:clean:110 - Message 437 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:54:35.040 | INFO     | __main__:clean:110 - Message 438 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:54:40.238 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:55:10.138 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:55:22.183 | INFO     | __main__:clean:110 - Message 442 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:55:22.190 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:55:22.473 | INFO     | __main__:clean:110 - Message 443 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:55:26.829 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:55:29.914 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:55:39.214 | ERROR    | telebot.util:run:59 - An error has been caught in function 'run', process 'MainProcess' (7676), thread 'WorkerThread1' (1064):
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 885, in _bootstrap
+    self._bootstrap_inner()
+    |    -> <function Thread._bootstrap_inner at 0x02B60C48>
+    -> <WorkerThread(WorkerThread1, started daemon 1064)>
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\threading.py", line 917, in _bootstrap_inner
+    self.run()
+    |    -> <function WorkerThread.run at 0x0315C540>
+    -> <WorkerThread(WorkerThread1, started daemon 1064)>
+> File "C:\Users\user\AppData\Local\Programs\Python\Python37-32\lib\site-packages\telebot\util.py", line 59, in run
+    task(*args, **kwargs)
+    |     |       -> {}
+    |     -> (<telebot.types.Message object at 0x0333E790>,)
+    -> <function bot_set_user_title at 0x03286AE0>
+
+  File "C:/Users/user/PycharmProjects/Jayne/main.py", line 406, in bot_set_user_title
+    updated_user = Users.update(custom_title=set_title[1]).where((Users.user_id == uid) & (Users.chat_id == cid))
+                   |     |                   |                    |     |          |       |     |          -> -1001171657825
+                   |     |                   |                    |     |          |       |     -> <peewee.FieldAccessor object at 0x032743F0>
+                   |     |                   |                    |     |          |       -> <Model: Users>
+                   |     |                   |                    |     |          -> 236514001
+                   |     |                   |                    |     -> <peewee.FieldAccessor object at 0x03274250>
+                   |     |                   |                    -> <Model: Users>
+                   |     |                   -> ['/title']
+                   |     -> <classmethod object at 0x00F4DAF0>
+                   -> <Model: Users>
+
+IndexError: list index out of range
+2020-01-23 18:55:42.521 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 18:58:01.127 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 18:58:01.583 | INFO     | __mp_main__:garbage_collector:223 - Message 432 in -1001171657825 successfully deleted 
+2020-01-23 18:58:01.812 | INFO     | __mp_main__:garbage_collector:223 - Message 433 in -1001171657825 successfully deleted 
+2020-01-23 18:58:01.961 | INFO     | __mp_main__:garbage_collector:223 - Message 434 in -1001171657825 successfully deleted 
+2020-01-23 18:58:02.065 | INFO     | __mp_main__:garbage_collector:223 - Message 436 in -1001171657825 successfully deleted 
+2020-01-23 18:58:02.162 | INFO     | __mp_main__:garbage_collector:223 - Message 437 in -1001171657825 successfully deleted 
+2020-01-23 18:58:02.269 | INFO     | __mp_main__:garbage_collector:223 - Message 438 in -1001171657825 successfully deleted 
+2020-01-23 18:58:02.375 | INFO     | __mp_main__:garbage_collector:223 - Message 442 in -1001171657825 successfully deleted 
+2020-01-23 18:58:02.489 | INFO     | __mp_main__:garbage_collector:223 - Message 443 in -1001171657825 successfully deleted 
+2020-01-23 18:58:08.537 | INFO     | __main__:clean:110 - Message 453 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:59:07.975 | INFO     | __main__:clean:110 - Message 455 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 18:59:15.673 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:00:12.910 | INFO     | __mp_main__:garbage_collector:223 - Message 453 in -1001171657825 successfully deleted 
+2020-01-23 19:01:13.248 | INFO     | __mp_main__:garbage_collector:223 - Message 455 in -1001171657825 successfully deleted 
+2020-01-23 19:16:30.400 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Melnax (127493928) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:16:30.410 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Bert_msk (111389296) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:16:30.420 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Bert_msk (111389296) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:16:38.925 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:16:38.935 | INFO     | __main__:clean:110 - Message 456 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:16:46.641 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:16:46.652 | INFO     | __main__:clean:110 - Message 458 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:16:52.127 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:16:52.137 | INFO     | __main__:clean:110 - Message 460 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:16:53.262 | INFO     | __main__:clean:110 - Message 461 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:18:30.855 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @axi_burr (196499973) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:18:30.977 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:18:40.519 | INFO     | __mp_main__:garbage_collector:226 - Message 456 in -1001171657825 successfully deleted 
+2020-01-23 19:18:50.631 | INFO     | __mp_main__:garbage_collector:226 - Message 458 in -1001171657825 successfully deleted 
+2020-01-23 19:19:00.736 | INFO     | __mp_main__:garbage_collector:226 - Message 460 in -1001171657825 successfully deleted 
+2020-01-23 19:19:00.843 | INFO     | __mp_main__:garbage_collector:226 - Message 461 in -1001171657825 successfully deleted 
+2020-01-23 19:19:35.678 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:19:35.688 | INFO     | __main__:clean:110 - Message 462 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:19:43.643 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:19:43.655 | INFO     | __main__:clean:110 - Message 464 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:20:28.561 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:20:28.572 | INFO     | __main__:clean:110 - Message 466 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:21:44.773 | INFO     | __mp_main__:garbage_collector:228 - Message 462 in -1001171657825 successfully deleted 
+2020-01-23 19:21:45.231 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:21:48.715 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @kennybangcola (874679873) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:21:54.890 | INFO     | __mp_main__:garbage_collector:228 - Message 464 in -1001171657825 successfully deleted 
+2020-01-23 19:22:04.198 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 19:22:18.843 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 19:22:24.650 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:22:35.079 | INFO     | __mp_main__:garbage_collector:228 - Message 466 in -1001171657825 successfully deleted 
+2020-01-23 19:22:35.481 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:22:39.537 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:22:39.547 | INFO     | __main__:clean:110 - Message 468 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:22:40.339 | INFO     | __main__:clean:110 - Message 469 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:22:42.132 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Bert_msk (111389296) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:22:45.860 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:22:49.061 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:22:59.646 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:22:59.657 | INFO     | __main__:clean:110 - Message 470 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:22:59.936 | INFO     | __main__:clean:110 - Message 471 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:23:00.988 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:23:10.300 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:23:10.714 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @kennybangcola (874679873) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:23:27.659 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:23:35.210 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:23:35.471 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:23:41.308 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:23:44.896 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:23:51.582 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @kennybangcola (874679873) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:24:03.165 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:24:21.656 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:24:23.775 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:24:23.785 | INFO     | __main__:clean:110 - Message 474 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:24:24.508 | INFO     | __main__:clean:110 - Message 475 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:24:27.709 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:24:30.365 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:24:30.376 | INFO     | __main__:clean:110 - Message 476 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:24:30.618 | INFO     | __main__:clean:110 - Message 477 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:24:45.041 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 19:24:46.218 | INFO     | __mp_main__:garbage_collector:229 - Message 468 in -1001171657825 successfully deleted 
+2020-01-23 19:24:46.329 | INFO     | __mp_main__:garbage_collector:229 - Message 469 in -1001171657825 successfully deleted 
+2020-01-23 19:24:52.813 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:25:06.456 | INFO     | __mp_main__:garbage_collector:229 - Message 470 in -1001171657825 successfully deleted 
+2020-01-23 19:25:06.570 | INFO     | __mp_main__:garbage_collector:229 - Message 471 in -1001171657825 successfully deleted 
+2020-01-23 19:25:09.439 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:25:27.576 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:25:49.734 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:26:17.685 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:26:26.279 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:26:26.925 | INFO     | __mp_main__:garbage_collector:229 - Message 474 in -1001171657825 successfully deleted 
+2020-01-23 19:26:27.033 | INFO     | __mp_main__:garbage_collector:229 - Message 475 in -1001171657825 successfully deleted 
+2020-01-23 19:26:35.990 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:26:37.145 | INFO     | __mp_main__:garbage_collector:229 - Message 476 in -1001171657825 successfully deleted 
+2020-01-23 19:26:37.255 | INFO     | __mp_main__:garbage_collector:229 - Message 477 in -1001171657825 successfully deleted 
+2020-01-23 19:27:00.623 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:27:22.804 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @kennybangcola (874679873) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:27:35.840 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:27:38.229 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 19:28:11.377 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:28:22.477 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:28:31.966 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @kennybangcola (874679873) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:28:56.095 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:29:08.297 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:29:19.044 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:29:19.978 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:29:33.389 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:29:37.982 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:30:05.481 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:16.245 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:19.351 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:24.944 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:26.448 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:27.647 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:33.332 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:30:35.380 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:41.702 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:30:45.068 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @axi_burr (196499973) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:30:53.678 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:31:01.067 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:31:06.036 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:31:30.616 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:31:37.918 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:31:43.520 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 19:31:45.693 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:31:45.979 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:31:48.291 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:31:49.758 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:31:52.462 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:32:02.970 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:32:14.300 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:32:34.840 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:32:41.868 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:32:48.865 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:33:04.999 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:33:53.709 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @axi_burr (196499973) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:34:28.444 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @axi_burr (196499973) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:34:39.937 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:35:46.161 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Egor_Zhukow (595298478) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:36:33.673 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:36:39.288 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:36:54.542 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @axi_burr (196499973) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:37:06.649 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:37:33.005 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:38:31.179 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:38:37.352 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Skytown (90290899) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-23 19:38:43.555 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:39:04.948 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Egor_Zhukow (595298478) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:39:24.248 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:39:27.209 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:39:56.936 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:40:04.164 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Egor_Zhukow (595298478) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:40:46.930 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:41:09.597 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:41:21.729 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:41:25.651 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:41:26.067 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:41:39.208 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:42:08.884 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Egor_Zhukow (595298478) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:42:32.253 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:42:49.501 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:42:54.009 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Egor_Zhukow (595298478) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.769 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.776 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:50:46.784 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.790 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.818 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.829 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.889 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.919 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.931 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.939 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:46.952 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:50:46.967 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:47.021 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:47.074 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:48.781 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:50.200 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:50:57.257 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:51:17.613 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:51:26.115 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:51:31.871 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:51:48.312 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:51:56.345 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:52:09.625 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-23 19:56:13.062 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.072 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @key_zer0 (224296057) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:56:13.085 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.102 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:56:13.140 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.148 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.159 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.175 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.204 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.231 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.239 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.251 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.269 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.324 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.455 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.471 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.479 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.487 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:13.496 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:20.802 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:56:23.657 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:56:23.668 | INFO     | __main__:clean:110 - Message 483 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:56:23.675 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:56:24.158 | INFO     | __main__:clean:110 - Message 484 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:56:26.887 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:56:29.990 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat что-то 1 (-1001171657825) updated
+2020-01-23 19:56:30.015 | INFO     | __main__:clean:110 - Message 486 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:56:30.193 | INFO     | __main__:clean:110 - Message 487 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-23 19:56:33.508 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:38.188 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:41.641 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:46.584 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:56:52.249 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:57:13.064 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:57:14.450 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:57:20.849 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:57:24.192 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:57:26.033 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @fenrir0vekovoy (56932048) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-23 19:57:32.832 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:57:37.107 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:58:10.584 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:58:10.984 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:58:18.884 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @key_zer0 (224296057) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:58:22.308 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:58:25.550 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:58:26.951 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:58:33.269 | INFO     | __mp_main__:garbage_collector:233 - Message 483 in -1001171657825 successfully deleted 
+2020-01-23 19:58:33.363 | INFO     | __mp_main__:garbage_collector:233 - Message 484 in -1001171657825 successfully deleted 
+2020-01-23 19:58:33.456 | INFO     | __mp_main__:garbage_collector:233 - Message 486 in -1001171657825 successfully deleted 
+2020-01-23 19:58:33.551 | INFO     | __mp_main__:garbage_collector:233 - Message 487 in -1001171657825 successfully deleted 
+2020-01-23 19:58:44.990 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:00.278 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:03.984 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:16.740 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:18.801 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:22.766 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @craftthedragon (624242) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:23.940 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:36.202 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:52.033 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 19:59:53.277 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:00:07.145 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:00:16.730 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:00:20.340 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:00:26.087 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:00:31.525 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:00:39.640 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:00:58.713 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:01:14.912 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:01:28.595 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:01:52.634 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @key_zer0 (224296057) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:01:56.960 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:02:06.938 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:02:14.728 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:02:18.076 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:02:34.807 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @key_zer0 (224296057) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:02:35.109 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:02:44.395 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @key_zer0 (224296057) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:02:53.699 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:03:08.729 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:03:12.241 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:03:24.143 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:03:42.762 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:03:59.743 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:04:20.137 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:04:23.549 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @CurtissRac (452661231) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:04:59.147 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:06.578 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:15.406 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:15.418 | INFO     | __main__:clean:110 - Message 19534 in chat Озверевшая Столица [SFW] (-1001485796071) marked for deleting
+2020-01-23 20:05:15.991 | INFO     | __main__:clean:110 - Message 19535 in chat Озверевшая Столица [SFW] (-1001485796071) marked for deleting
+2020-01-23 20:05:16.153 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:18.991 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:20.243 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:22.366 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:42.746 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:44.718 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:55.925 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:57.561 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:58.923 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:05:59.249 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:06:06.066 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:06:11.018 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:06:19.869 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:06:23.798 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-23 20:06:23.990 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Timmarten (178994124) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:18:52.045 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.052 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.279 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:52.288 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Skyerwolfy (236514001) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:52.301 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.340 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.360 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.377 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.397 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.410 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.420 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.435 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.518 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:52.530 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:53.040 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:53.103 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:53.127 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:53.139 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:53.147 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:53.158 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @LoziCheetah (86058576) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:53.265 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:53.597 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @LoziCheetah (86058576) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:53.972 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:54.034 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:54.101 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:54.121 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:54.199 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:54.788 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.276 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:55.285 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.315 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.437 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.513 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.673 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.701 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.709 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.761 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:55.805 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.147 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.160 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.205 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.421 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.473 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.500 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Paul_The_Guy (377423359) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.518 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.526 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:56.614 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @fluffing (119575433) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:56.734 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.136 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.296 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.304 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.346 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @fluffing (119575433) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.355 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.367 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.394 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.400 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.440 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.443 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.457 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.460 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.484 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.514 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.519 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.542 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.546 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.601 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.630 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.637 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.649 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.656 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.673 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.677 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.685 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.689 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:57.708 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.000 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.051 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.065 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.084 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.092 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.100 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.127 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.139 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.153 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.160 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.167 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.184 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.216 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.264 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.272 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.281 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.308 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.335 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.385 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.417 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.437 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.449 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.460 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.701 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.910 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.952 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.963 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.971 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:58.980 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.009 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @fluffing (119575433) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.018 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.030 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.039 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @fluffing (119575433) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.056 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Kobold270 (340169219) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.067 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.071 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.083 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @ToonFox (101753487) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.089 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.100 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ToonFox (101753487) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.107 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.110 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ToonFox (101753487) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.120 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ToonFox (101753487) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.128 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.181 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ToonFox (101753487) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.187 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.196 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.204 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.209 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ToonFox (101753487) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.216 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.229 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.242 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.250 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.262 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.271 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @A114N (539180125) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.281 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.295 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.304 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.308 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.318 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.328 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.354 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.365 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.368 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.380 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.388 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.394 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @fluffing (119575433) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.398 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.407 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.416 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Angry_Yeena (358670233) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.446 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.455 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.464 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.471 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.492 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.497 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.508 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.518 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.523 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.530 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.556 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.569 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.572 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.583 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.591 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.599 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.609 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.617 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.626 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.629 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.643 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.653 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.656 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.667 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.678 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.686 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.698 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @TonyWerner (241001432) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.704 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.719 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @TonyWerner (241001432) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.727 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.737 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.740 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.760 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.767 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.772 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.782 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.785 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.803 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.813 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.825 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Rowecon (232913789) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.831 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Helka_furry (78909388) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.837 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Fexur (282398352) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:18:59.848 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.859 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.862 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Fexur (282398352) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.874 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.877 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.888 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.894 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.898 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.909 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.913 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.925 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.929 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.939 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.943 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.957 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.959 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.970 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.978 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.986 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:18:59.997 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.008 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:19:00.016 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.025 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.038 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Korsak_SPB (210868154) in chat [18+] Озверевший Afterdark (-1001457973105) added to db
+2020-01-27 15:19:00.046 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.055 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.063 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.072 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.082 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.090 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.099 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.113 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.122 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.130 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.138 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.146 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.155 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.163 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.171 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.180 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.189 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.197 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.206 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.214 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.223 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.231 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.239 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.248 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.256 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.268 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.277 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.287 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.405 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.417 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.434 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.444 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.453 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Mio_spacecat (100494334) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.464 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.473 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.482 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Korsak_SPB (210868154) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.490 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.499 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.507 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:00.517 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @deadphilosopher (228561905) in chat [18+] Озверевший Afterdark (-1001457973105) updated
+2020-01-27 15:19:19.208 | INFO     | __main__:clean:110 - Message 492 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-27 15:20:53.716 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:20:53.722 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.735 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.743 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.754 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.761 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @fenrir0vekovoy (56932048) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.765 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.783 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.788 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.799 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Gotya (186706426) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:20:53.820 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.824 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:53.925 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.006 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.028 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.032 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.040 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.075 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.092 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.097 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.125 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.129 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @DatJinks (49123445) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:20:54.140 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.160 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.346 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.350 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.395 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Comatose_Ferret (527603912) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:54.424 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.077 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.088 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.102 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.127 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.148 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Gotya (186706426) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.231 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.244 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.259 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.268 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.315 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.322 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.325 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.354 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.363 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.369 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.421 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Gotya (186706426) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:55.428 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Kaori_Ferret (104992843) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.553 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Gotya (186706426) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.564 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Gotya (186706426) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.582 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.595 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.607 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.616 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.652 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.678 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Marihuanich (180031546) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:20:56.694 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @winged_one (177759840) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:20:56.740 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Marihuanich (180031546) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.769 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.777 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @zlnles (289927405) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.785 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.803 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Marihuanich (180031546) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.860 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:20:56.869 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:00.962 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:00.973 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.000 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @ShockwavE_66 (189229316) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:21:01.573 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @winged_one (177759840) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.759 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @winged_one (177759840) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.858 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.940 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @winged_one (177759840) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.945 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.956 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.959 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:01.982 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:02.060 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:02.106 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:02.186 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:02.281 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:02.423 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:02.982 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:02.991 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:03.002 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Skytown (90290899) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:21:03.123 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:03.158 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skytown (90290899) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:03.525 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Iam_Zozo (511142888) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:04.068 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:04.323 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Iam_Zozo (511142888) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:04.328 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:04.337 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @ChaikaWiFika (423408620) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:04.341 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @storihbeg (461192871) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:04.355 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.118 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.382 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:21:05.387 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.398 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.401 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.410 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.420 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.423 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.432 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.452 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.464 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.472 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @dr3adn0ught (67646660) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.480 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Marihuanich (180031546) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.498 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.514 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.524 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.532 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.539 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:05.998 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @lynrayy (810732592) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.014 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.022 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.030 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.039 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.122 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @niohisi (24978372) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.181 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.209 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Skyerwolfy (236514001) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.226 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Shaman_sky (374433033) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:06.249 | INFO     | __main__:add_new_user_or_update_msg_count:140 - User @Lynx23 (131194625) in chat Озверевшая Столица [SFW] (-1001485796071) added to db
+2020-01-27 15:21:21.355 | INFO     | __mp_main__:garbage_collector:234 - Message 492 in -1001171657825 successfully deleted 
+2020-01-27 15:21:21.606 | INFO     | __main__:add_new_user_or_update_msg_count:149 - Message count for  @Lynx23 (131194625) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:23.333 | INFO     | __main__:clean:111 - Message 494 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-27 15:21:27.182 | INFO     | __main__:add_new_user_or_update_msg_count:149 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:21:41.211 | INFO     | __main__:add_new_user_or_update_msg_count:149 - Message count for  @Lynx23 (131194625) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:22:25.496 | INFO     | __main__:clean:110 - Message 496 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-27 15:22:34.285 | INFO     | __main__:clean:110 - Message 498 in chat что-то 1 (-1001171657825) marked for deleting
+2020-01-27 15:23:25.231 | INFO     | __main__:add_new_user_or_update_msg_count:148 - Message count for  @Rowecon (232913789) in chat Озверевшая Столица [SFW] (-1001485796071) updated
+2020-01-27 15:23:36.830 | INFO     | __mp_main__:garbage_collector:233 - Message 494 in -1001171657825 successfully deleted 

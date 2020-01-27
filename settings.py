@@ -1,0 +1,2 @@
+master_id=24978372
+time_to_delete_garbage=120
