@@ -22,18 +22,47 @@ args = parser.parse_args()
 bot_token = args.token  # Lenore token
 Cobb = telebot.TeleBot(bot_token)
 db = SqliteDatabase('JayneCobbDatabase.db', check_same_thread=False)
+db_messages = SqliteDatabase('JayneCobbDatabase_messages.db', check_same_thread=False)
 logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="INFO")
 logger.add("Cobb.log", rotation="1 MB", enqueue=True)
 
 restart_flag = False
 
 
+class MessageLog(Model):
+    message_id = IntegerField()
+    message_date = IntegerField()
+    message_text = CharField()
+    chat_id = IntegerField()
+    chat_title = CharField()
+    chat_username = CharField()
+    from_user_id = IntegerField()
+    from_user_is_bot = BooleanField()
+    from_user_username = CharField()
+    from_user_first_name = CharField()
+    from_user_last_name = CharField()
+    forward_from_user_id = IntegerField()
+    forward_from_user_username = CharField()
+    forward_user_first_name = CharField()
+    forward_from_chat_id = IntegerField()
+    forward_from_chat_username = CharField()
+    forward_from_chat_title = CharField()
+    forward_date = IntegerField()
+    reply_to_message_id = IntegerField()
+    reply_to_message_from_username = CharField()
+    reply_to_message_text = CharField()
+    message_edit_date = IntegerField()
+    mod_command = CharField()
+    clean = BooleanField()
+
+    class Meta:
+        database = db_messages
+
+
 class Users(Model):
     user_id = CharField()
     chat_id = IntegerField()
     first_join = DateField()
-    messages_month = IntegerField()
-    messages_all_time = IntegerField()
     warn_count = IntegerField()
     custom_title = CharField()
     is_boss = BooleanField()
@@ -138,14 +167,6 @@ def add_new_user_or_update_msg_count(message, given_uid=None):
 
         logger.info("User @%s (%s) in chat %s (%s) added to db" % (
             message.from_user.username, uid, message.chat.title, cid))
-    else:
-        updated_user = Users.update(messages_all_time=Users.messages_all_time + 1,
-                                    messages_month=Users.messages_month + 1).where(
-            (Users.user_id == uid) & (Users.chat_id == cid))
-        updated_user.execute()
-
-        logger.info("Message count for  @%s (%s) in chat %s (%s) updated" % (
-            message.from_user.username, uid, message.chat.title, cid))
 
 
 @logger.catch
@@ -199,25 +220,45 @@ def have_privileges(message):
         return False
 
 
-@logger.catch
-def add_chat_message_to_log(message, moderation=False, editing=False):
-    if moderation == True:
-        filename = "moderation_%s.csv" % message.chat.id
-        row = [message.date, message.from_user.id, message.message_id, message.from_user.username,
-               Cobb.get_chat_member(message.chat.id, message.reply_to_message.from_user.id).user.first_name,
-               message.text]
-    elif editing == True:
-        filename = "%s.csv" % message.chat.id
-        row = [message.date, message.from_user.id, message.message_id, message.from_user.username,
-               "[EDITED]: " + message.text]
-    else:
-        filename = "%s.csv" % message.chat.id
-        row = [message.date, message.from_user.id, message.message_id, message.from_user.username, message.text]
+def log_chat_message(message, mod_command=False, marked_to_delete=False):
     try:
-        with open(filename, 'a', encoding='utf-8') as csvFile:
-            writer = csv.writer(csvFile, dialect='localeDialect')
-            writer.writerow(row)
-            csvFile.close()
+        log_entry = {'message_id': message.message_id, 'message_date': message.date, 'message_text': message.text,
+                     'chat_id': message.chat.id, 'chat_title': message.chat.title,
+                     'chat_username': message.chat.username, 'from_user_id': message.from_user.id,
+                     'from_user_is_bot': message.from_user.is_bot, 'from_user_username': message.from_user.username,
+                     'from_user_first_name': message.from_user.first_name,
+                     'from_user_last_name': message.from_user.last_name,
+                     'forward_from_user_id': 0, 'forward_from_user_username': '', 'forward_user_first_name': '',
+                     'forward_from_chat_id': 0, 'forward_from_chat_username': '', 'forward_from_chat_title': '',
+                     'forward_date': 0, 'reply_to_message_id': 0, 'reply_to_message_from_username': '',
+                     'reply_to_message_text': '', 'message_edit_date': 0, 'mod_command': mod_command,
+                     'marked_to_delete': marked_to_delete}
+
+        if message.reply_to_message is not None:
+            log_entry['reply_to_message_id'] = message.reply_to_message.message_id
+            log_entry['reply_to_message_from_username'] = message.reply_to_message.from_user.username
+            log_entry['reply_to_message_text'] = message.reply_to_message.text
+        if message.forward_from_chat is not None:
+            log_entry['forward_from_chat_id'] = message.forward_from_chat.id
+            log_entry['forward_from_chat_username'] = message.forward_from_chat.username
+            log_entry['forward_from_chat_title'] = message.forward_from_chat.title
+            log_entry['forward_date'] = message.forward_date
+        if message.forward_from is not None:
+            log_entry['forward_from_user_id'] = message.forward_from.id
+            log_entry['forward_from_user_username'] = message.forward_from.username
+            log_entry['forward_user_first_name'] = message.forward_from.first_name
+            log_entry['forward_date'] = message.forward_date
+
+        if message.edit_date is not None:
+            log_entry['message_edit_date'] = message.edit_date
+        for key, value in log_entry.items():
+            if log_entry[key] is None:
+                log_entry[key] = ''
+        with db_messages.atomic():
+            MessageLog.create(**log_entry)
+
+        print(log_entry)
+
     except Exception as e:
         logger.critical(e)
 
@@ -246,6 +287,7 @@ def garbage_collector():
 def bot_status(message):
     try:
         clean(Cobb.reply_to(message, "Online"))
+        print(message)
     except Exception as e:
         print(e)
 
@@ -436,7 +478,7 @@ def bot_set_user_title(message):
 
 @Cobb.message_handler(commands=['warn'])
 @logger.catch
-def bot_modify_karma(message):
+def bot_warn(message):
     add_new_user_or_update_msg_count(message)
     clean(message)
     if message.reply_to_message is None:
@@ -458,7 +500,7 @@ def bot_modify_karma(message):
                 updating_user = Users.update(warn_count=Users.warn_count + 1).where(
                     (Users.user_id == uid) & (Users.chat_id == cid))
                 updating_user.execute()
-                add_chat_message_to_log(message, moderation=True)
+                log_chat_message(message, moderation=True)
                 Cobb.reply_to(message, "Пользователю %s выдано предупреждение, сейчас предупреждений: %s" % (
                     target_user.user.first_name,
                     Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).get().warn_count))
@@ -467,11 +509,7 @@ def bot_modify_karma(message):
 @Cobb.edited_message_handler()
 def bot_message_edited(message):
     if message.chat.type != 'private':
-        uid = message.from_user.id
-        cid = message.chat.id
-        if Chats.get(Chats.chat_id == cid).log_text:
-            LogMessage = Process(target=add_chat_message_to_log, args=(message, False, True,))
-            LogMessage.start()
+        log_chat_message(message)
     else:
         pass
 
@@ -481,15 +519,13 @@ def bot_message_edited(message):
 def bot_listener(message):
     if message.chat.type != 'private':
 
-
         add_new_user_or_update_msg_count(message)
         add_new_chat_or_change_info(message)
-
         uid = message.from_user.id
         cid = message.chat.id
         if Chats.get(Chats.chat_id == cid).log_text:
-            LogMessage = Process(target=add_chat_message_to_log, args=(message,))
-            LogMessage.start()
+            log_chat_message(message)
+
     else:
         pass
 
@@ -500,6 +536,7 @@ if __name__ == '__main__':
     Users.create_table()
     Chats.create_table()
     Garbage.create_table()
+    MessageLog.create_table()
 
     GarbageCleaner = Process(target=garbage_collector, args=())
     GarbageCleaner.start()
