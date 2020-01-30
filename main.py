@@ -13,6 +13,8 @@ from loguru import logger
 import csv
 import settings
 import re
+from telebot import apihelper
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 parser = argparse.ArgumentParser(add_help=True, description='Cobb Bot for Telegram')
 parser.add_argument('--token', action='store', help='Authentication token [required]', required=True)
@@ -79,9 +81,12 @@ class Chats(Model):
     chat_title = IntegerField()
     chat_link = CharField()
     rules_text = CharField()
+    welcome_set = BooleanField()
+    welcome_text = CharField()
     log_text = BooleanField()
     log_pics = BooleanField()
     antibot = BooleanField()
+    antibot_text = CharField()
     rm_voices = BooleanField()
 
     class Meta:
@@ -89,7 +94,7 @@ class Chats(Model):
 
 
 @logger.catch
-def restarter():
+def func_restarter():
     # returns True if restart was initiated and removes file-marker, False - if file is not exists and create him
     trigger_file = "/tmp/JayneCobb.tmp"
     if os.path.isfile(trigger_file):
@@ -102,28 +107,28 @@ def restarter():
         return None
 
 
-restart_cid = restarter()
+restart_cid = func_restarter()
 if restart_cid is not None:
     Cobb.send_message(restart_cid, "Новый код принят и запущен.")
     logger.info("Bot live at %s" % datetime.time)
 
 
 @logger.catch
-def restart_writer(cid):
+def func_restart_writer(cid):
     file = open("/tmp/JayneCobb.tmp", 'w')
     file.write(str(cid))
     file.close()
 
 
 @logger.catch
-def clean(message):
-    log_chat_message(message, marked_to_delete=True)
+def func_clean(message):
+    func_log_chat_message(message, marked_to_delete=True)
     logger.info("Message %s in chat %s (%s) marked for deleting" % (
         message.message_id, message.chat.title, message.chat.id))
 
 
 @logger.catch
-def add_new_user(message, given_uid=None):
+def func_add_new_user(message, given_uid=None):
     if given_uid is None:
         uid = message.from_user.id
     else:
@@ -149,7 +154,7 @@ def add_new_user(message, given_uid=None):
 
 
 @logger.catch
-def add_new_chat_or_change_info(message):
+def func_add_new_chat_or_change_info(message):
     cid = message.chat.id
 
     if message.chat.type != 'private':
@@ -159,10 +164,13 @@ def add_new_chat_or_change_info(message):
             Chats.insert(chat_id=cid,
                          chat_title=message.chat.title,
                          chat_link=Cobb.export_chat_invite_link(cid),
-                         rules_text='',
+                         rules_text="",
                          log_text=True,
                          log_pics=False,
                          antibot=False,
+                         antibot_text=settings.antibot_welcome_default,
+                         welcome_set=False,
+                         welcome_text=settings.welcome_default,
                          rm_voices=True).execute()
 
             logger.info("New chat %s (%s) added to database" % (message.chat.title, cid))
@@ -175,7 +183,7 @@ def add_new_chat_or_change_info(message):
 
 
 @logger.catch
-def karma_change(cid, uid, change):
+def func_karma_change(cid, uid, change):
     #     change inc/dec == +/-
     if change == 1:
         updated_user = Users.update(karma=Users.karma + 1).where((Users.user_id == uid) & (Users.chat_id == cid))
@@ -185,7 +193,7 @@ def karma_change(cid, uid, change):
 
 
 @logger.catch
-def have_privileges(message):
+def func_have_privileges(message):
     try:
         status = Cobb.get_chat_member(message.chat.id, message.from_user.id).status
         who = Users.select().where((Users.user_id == message.from_user.id) & (Users.chat_id == message.chat.id)).get()
@@ -198,10 +206,10 @@ def have_privileges(message):
         return False
 
 
-def user_is_not_exists(message):
-    clean(Cobb.reply_to(message,
-                        "К сожалению, пользователя еще нет в моей базе данных.\n"
-                        "Видимо, он еще не писал в чате с момента моего включения."))
+def func_user_is_not_exists(message):
+    func_clean(Cobb.reply_to(message,
+                             "К сожалению, пользователя еще нет в моей базе данных.\n"
+                             "Видимо, он еще не писал в чате с момента моего включения."))
 
 
 def log_chat_message(message, marked_to_delete=False):
@@ -252,8 +260,8 @@ def log_chat_message(message, marked_to_delete=False):
 
 
 @logger.catch
-def garbage_collector():
-    while restarter() is None:
+def process_garbage_collector():
+    while func_restarter() is None:
         query = MessageLog.select().where(
             (MessageLog.message_date < int(time.time()) - settings.time_to_delete_garbage) & (
                     MessageLog.marked_to_delete == True))
@@ -275,11 +283,33 @@ def garbage_collector():
         time.sleep(30)
 
 
+@logger.catch
+def func_callback_query_factory(callback_code, *args):
+    callback_text = str(callback_code)
+    for arg in args:
+        callback_text += "|" + str(arg)
+    return callback_text
+
+
 @Cobb.message_handler(commands=['status'])
 def bot_status(message):
     try:
-        log_chat_message(message)
-        clean(Cobb.reply_to(message, "Online"))
+        func_log_chat_message(message)
+        query = Chats.select().where(Chats.chat_id == message.chat.id).get()
+        text = "CID: %s\n" \
+               "Title: %s\n" \
+               "Link: %s\n" \
+               "Rules text: %s\n" \
+               "Welcome set: %s\n" \
+               "Welcome text: %s\n" \
+               "Logging text: %s\n" \
+               "Logging pics: %s\n" \
+               "Antibot on: %s\n" \
+               "Antibot text: %s\n" \
+               "Remove voices: %s" % (query.chat_id, query.chat_title, query.chat_link, query.rules_text,
+                                      query.welcome_set, query.welcome_text, query.log_text, query.log_pics,
+                                      query.antibot, query.antibot_text, query.rm_voices)
+        func_clean(Cobb.reply_to(message, text))
     except Exception as e:
         print(e)
 
@@ -290,31 +320,158 @@ def bot_reboot(message):
     cid = message.chat.id
     query = Users.select().where(Users.user_id == uid & Users.chat_id == cid & Users.is_boss == True)
     if query.exists():
-        log_chat_message(message)
-        clean(Cobb.reply_to(message, "Завершаюсь"))
-        restart_writer(cid)
+        func_log_chat_message(message)
+        func_clean(Cobb.reply_to(message, "Завершаюсь"))
+        func_restart_writer(cid)
         os.kill(os.getpid(), signal.SIGTERM)
     else:
         pass
-        clean(Cobb.reply_to(message, "Nope"))
+        func_clean(Cobb.reply_to(message, "Nope"))
+
+
+@Cobb.message_handler(commands=['antibot'])
+@logger.catch
+def bot_antibot_trigger(message):
+    uid = message.from_user.id
+    cid = message.chat.id
+    title = message.chat.title
+    uname = message.from_user.username
+    func_have_privileges(message)
+    if func_have_privileges(message):
+        if Chats.get(Chats.chat_id == cid).antibot:
+            query = Chats.update(antibot=False).where(Chats.chat_id == cid)
+            query.execute()
+            Cobb.reply_to(message, "Антибот выключен.")
+
+            logger.info("User @%s (%s) switch off antibot in chat %s (%s)" % (
+                uname, uid, title, cid))
+        else:
+            query = Chats.update(antibot=True).where(Chats.chat_id == cid)
+            query.execute()
+            Cobb.reply_to(message, "Антибот включен.")
+
+            logger.info("User @%s (%s) switch on antibot in chat %s (%s)" % (
+                uname, uid, title, cid))
+    else:
+        Cobb.reply_to(message, "Nope.")
+
+@Cobb.message_handler(commands=['welcome'])
+@logger.catch
+def bot_welcome_trigger(message):
+    uid = message.from_user.id
+    cid = message.chat.id
+    title = message.chat.title
+    uname = message.from_user.username
+    func_have_privileges(message)
+    if func_have_privileges(message):
+        if Chats.get(Chats.chat_id == cid).welcome_set:
+            query = Chats.update(welcome_set=False).where(Chats.chat_id == cid)
+            query.execute()
+            Cobb.reply_to(message, "Приветственное сообщение выключено.")
+
+            logger.info("User @%s (%s) switch off welcome in chat %s (%s)" % (
+                uname, uid, title, cid))
+        else:
+            query = Chats.update(welcome_set=True).where(Chats.chat_id == cid)
+            query.execute()
+            Cobb.reply_to(message, "Приветственное сообщение включено.")
+
+            logger.info("User @%s (%s) switch on welcome in chat %s (%s)" % (
+                uname, uid, title, cid))
+    else:
+        Cobb.reply_to(message, "Nope.")
+
+
+@logger.catch
+@Cobb.message_handler(content_types=["bot_new_chat_members"])
+def bot_new_chat_members(message):
+    try:
+        cid = message.chat.id
+        bot_id = Cobb.get_me()
+        if bot_id.id == message.new_chat_member.id:
+            func_add_new_chat_or_change_info(message)
+        else:
+            uid = message.from_user.id
+            incoming_user_username = '@' + Cobb.get_chat_member(cid, uid).user
+            query = Chats.select().where(Chats.chat_id == cid).get()
+            if Users.select(Users.user_id).where(
+                    (Users.chat_id == cid) & (Users.user_id == uid)).exists():
+                if query.welcome_set:
+                    func_clean(Cobb.reply_to(message, settings.returning_user_message % incoming_user_username))
+            else:
+
+                if query.antibot:
+
+                    Cobb.restrict_chat_member(cid, message.new_chat_member.id, int(time.time()), False,
+                                              False,
+                                              False, False)
+                    antibot_callback_dataset = func_callback_query_factory(settings.antibot_callback_code,
+                                                                           str(message.new_chat_member.id),
+                                                                           query.welcome_set)
+
+                    antibot_markup = InlineKeyboardMarkup()
+                    antibot_markup.add(InlineKeyboardButton("🦐", callback_data=antibot_callback_dataset))
+                    Cobb.reply_to(message, query.antibot_text, reply_markup=antibot_markup)
+                else:
+                    if query.welcome_set:
+                        func_clean(
+                            Cobb.reply_to(message, Chats.select().where(Chats.chat_id == cid).get().welcome_text))
+                    func_add_new_user(message)
+    except Exception as e:
+        logger.exception(e)
+
+
+@Cobb.callback_query_handler(func=lambda call: True)
+def callback_inline(call):
+    try:
+        # noinspection PyShadowingNames
+        cid = call.message.chat.id
+        mid = call.message.message_id
+        call_dataset = call.data.split("|")
+        print(call_dataset)
+        if int(call_dataset[0]) == settings.antibot_callback_code:
+            clicking_user = str(call.from_user.id)
+
+            if call_dataset[1] == clicking_user:
+                if call_dataset[2] == "True":
+
+                    Cobb.edit_message_text(
+                        settings.antibot_passed + "\n" + Chats.select().where(Chats.chat_id == cid).get().welcome_text,
+                        cid,
+                        mid)
+                else:
+                    Cobb.edit_message_text(settings.antibot_passed, cid, mid)
+
+                Cobb.answer_callback_query(callback_query_id=call.id, show_alert=True, text="Проверка пройдена.")
+
+                Cobb.restrict_chat_member(call.message.chat.id, call.from_user.id, int(time.time()), True, True, True,
+                                          True)
+
+                func_add_new_user(call.message, call.from_user.id)
+
+                logger.info("User @%s (%s) in chat %s (%s) succesfully passed verification" % (
+                    call.message.from_user.username, call.from_user.id, call.message.chat.title, cid))
+
+    except Exception as e:
+        logger.exception(e)
 
 
 @Cobb.message_handler(commands=['whois'])
 @logger.catch
 def bot_whois(message):
-    add_new_user(message)
-    clean(message)
+    func_add_new_user(message)
+    func_clean(message)
     cid = message.chat.id
     if message.reply_to_message is None:
         uid = message.from_user.id
-        add_new_user(message)
+        func_add_new_user(message)
     else:
         uid = message.reply_to_message.from_user.id
 
     query = Users.select().where((Users.user_id == uid) & (Users.chat_id == cid))
 
     if not query.exists():
-        user_is_not_exists(message)
+        func_user_is_not_exists(message)
     else:
         requested_user = Cobb.get_chat_member(message.chat.id, uid)
         subquery = query.get()
@@ -339,14 +496,14 @@ def bot_whois(message):
                                                           time.time()) - 2629743)).count(),
                                                   warn_count=subquery.warn_count)
 
-        clean(Cobb.reply_to(message, whois_info))
+        func_clean(Cobb.reply_to(message, whois_info))
 
 
 @Cobb.message_handler(commands=['message_top'])
 @logger.catch
 def bot_message_top(message):
-    add_new_user(message)
-    clean(message)
+    func_add_new_user(message)
+    func_clean(message)
     cid = message.chat.id
     top_all = "Топ сообщений у пользователей за все время:\n"
     top_month = "Топ сообщений у пользователей за месяц:\n"
@@ -378,9 +535,14 @@ def bot_message_top(message):
         top_month += "%s. @%s - %s\n" % (iter, key, value)
         iter += 1
     print(top_month)
-        # print(unique_users.from_user_id)
-        # print(unique_users.from_user_username)
-        # print(MessageLog.select().where((MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count())
+
+    for us in MessageLog.select(MessageLog.owner, MessageLog.from_user_username).join(Users, JOIN.INNER).where(
+            MessageLog.owner == Users.user_id).distinct():
+        print(us.owner)
+    print()
+    # print(unique_users.from_user_id)
+    # print(unique_users.from_user_username)
+    # print(MessageLog.select().where((MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count())
 
     # for user_id, user_name in potential_top.items():
     #     print('%s - %s' % (user_name, MessageLog.select().where((MessageLog.chat_id == cid) & (MessageLog.from_user_id == user_id)).count()))
@@ -406,8 +568,8 @@ def bot_rm_voices_trigger(message):
     cid = message.chat.id
     title = message.chat.title
     uname = message.from_user.username
-    have_privileges(message)
-    if have_privileges(message):
+    func_have_privileges(message)
+    if func_have_privileges(message):
         if Chats.get(Chats.chat_id == cid).rm_voices:
             query = Chats.update(rm_voices=False).where(Chats.chat_id == cid)
             query.execute()
@@ -434,7 +596,7 @@ def bot_log_chat_trigger(message):
     title = message.chat.title
     uname = message.from_user.username
 
-    if have_privileges(message):
+    if func_have_privileges(message):
         if Chats.get(Chats.chat_id == cid).log_text:
             query = Chats.update(log_text=False).where(Chats.chat_id == cid)
             query.execute()
@@ -456,37 +618,38 @@ def bot_log_chat_trigger(message):
 @Cobb.message_handler(commands=['+', '-'])
 @logger.catch
 def bot_modify_karma(message):
-    add_new_user(message)
+    func_add_new_user(message)
     if message.reply_to_message is None:
-        clean(
+        func_clean(
             Cobb.reply_to(message, "Чтобы изменить кому-то карму, нужно ответить на его сообщение командой /+ или /-"))
     elif message.from_user.id == message.reply_to_message.from_user.id:
-        clean(Cobb.reply_to(message, "Самому себе карму изменить нельзя!"))
+        func_clean(Cobb.reply_to(message, "Самому себе карму изменить нельзя!"))
     else:
-        log_chat_message(message)
+        func_log_chat_message(message)
         cid = message.chat.id
         uid = message.reply_to_message.from_user.id
         if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
-            user_is_not_exists(message)
+            func_user_is_not_exists(message)
         else:
             if message.text == '/+':
-                karma_change(cid, uid, 1)
+                func_karma_change(cid, uid, 1)
             else:
-                karma_change(cid, uid, -1)
+                func_karma_change(cid, uid, -1)
 
-            clean(Cobb.reply_to(message, "Карма изменена для %s, текущее значение: %s" %
-                                (Cobb.get_chat_member(cid, uid).user.first_name,
-                                 Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).get().karma)))
+            func_clean(Cobb.reply_to(message, "Карма изменена для %s, текущее значение: %s" %
+                                     (Cobb.get_chat_member(cid, uid).user.first_name,
+                                      Users.select().where(
+                                          (Users.user_id == uid) & (Users.chat_id == cid)).get().karma)))
 
 
 @Cobb.message_handler(commands=['title'])
 @logger.catch
 def bot_set_user_title(message):
-    add_new_user(message)
-    clean(message)
+    func_add_new_user(message)
+    func_clean(message)
     cid = message.chat.id
-    have_privileges(message)
-    if have_privileges(message):
+    func_have_privileges(message)
+    if func_have_privileges(message):
         if message.reply_to_message is None:
             uid = message.from_user.id
         else:
@@ -501,7 +664,7 @@ def bot_set_user_title(message):
         query = Users.select().where((Users.user_id == uid) & (Users.chat_id == cid))
 
         if not query.exists():
-            user_is_not_exists(message)
+            func_user_is_not_exists(message)
         else:
 
             updated_user = Users.update(custom_title=new_title).where((Users.user_id == uid) & (Users.chat_id == cid))
@@ -512,28 +675,28 @@ def bot_set_user_title(message):
             Cobb.reply_to(message, title_change_info)
 
     else:
-        clean(Cobb.reply_to(message, "Nope."))
+        func_clean(Cobb.reply_to(message, "Nope."))
 
 
 @Cobb.message_handler(commands=['warn', 'mute', 'ban', 'unwarn'])
 @logger.catch
 def bot_moderation(message):
     if message.reply_to_message is None:
-        clean(
+        func_clean(
             Cobb.reply_to(message, "Для использования этой команды необходимо ответить ей на сообщение."))
     elif message.from_user.id == message.reply_to_message.from_user.id:
-        clean(Cobb.reply_to(message, "Эту команду нельзя применить на себя."))
+        func_clean(Cobb.reply_to(message, "Эту команду нельзя применить на себя."))
     else:
         cid = message.chat.id
         uid = message.reply_to_message.from_user.id
         target_user = Cobb.get_chat_member(message.chat.id, uid)
         if target_user.status == "administrator" or target_user.status == "creator":
-            clean(Cobb.reply_to(message, "Эту команду нельзя использовать на модератора/создателя чата!"))
+            func_clean(Cobb.reply_to(message, "Эту команду нельзя использовать на модератора/создателя чата!"))
         else:
             if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
-                user_is_not_exists(message)
+                func_user_is_not_exists(message)
             else:
-                log_chat_message(message)
+                func_log_chat_message(message)
                 cmd = message.text.split(' ')
                 # ['/warn', '/mute', '/ban', '/unwarn']:
                 if cmd[0] == '/warn':
@@ -546,8 +709,8 @@ def bot_moderation(message):
                         Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).get().warn_count))
                 if cmd[0] == '/mute':
                     if not re.match(r'((\d*\s)([dmh])(\s)(.*))', ' '.join(str(message.text).split(' ')[1:])):
-                        clean(Cobb.reply_to(message, 'Неверный синтаксис команды, бака!\n'
-                                                     'Правильно: /mute [time] [m/d/h] [причина]'))
+                        func_clean(Cobb.reply_to(message, 'Неверный синтаксис команды, бака!\n'
+                                                          'Правильно: /mute [time] [m/d/h] [причина]'))
                     else:
                         mute_time = 60
                         if cmd[2] == 'd':
@@ -566,7 +729,7 @@ def bot_moderation(message):
 
                 if cmd[0] == '/ban':
                     if not len(cmd) > 1:
-                        clean(Cobb.reply_to(message, 'Необходимо указать причину бана!'))
+                        func_clean(Cobb.reply_to(message, 'Необходимо указать причину бана!'))
                     else:
                         Cobb.kick_chat_member(cid, uid)
                         Cobb.delete_message(cid, message.reply_to_message.message_id)
@@ -575,7 +738,8 @@ def bot_moderation(message):
                 if cmd[0] == '/unwarn':
                     if Users.select().where(
                             (Users.user_id == uid) & (Users.chat_id == message.chat.id)).get().warn_count < 1:
-                        clean(Cobb.reply_to(message, "Количество варнов у пользователя не может быть меньше нуля."))
+                        func_clean(
+                            Cobb.reply_to(message, "Количество варнов у пользователя не может быть меньше нуля."))
                     else:
                         updating_user = Users.update(warn_count=Users.warn_count - 1).where(
                             (Users.user_id == uid) & (Users.chat_id == cid))
@@ -588,7 +752,7 @@ def bot_moderation(message):
 @Cobb.edited_message_handler()
 def bot_message_edited(message):
     if message.chat.type != 'private':
-        log_chat_message(message)
+        func_log_chat_message(message)
     else:
         pass
 
@@ -597,11 +761,11 @@ def bot_message_edited(message):
 @logger.catch
 def bot_listener(message):
     if message.chat.type != 'private':
-        add_new_user(message)
-        add_new_chat_or_change_info(message)
+        func_add_new_user(message)
+        func_add_new_chat_or_change_info(message)
         cid = message.chat.id
         if Chats.get(Chats.chat_id == cid).log_text:
-            log_chat_message(message)
+            func_log_chat_message(message)
 
     else:
         pass
@@ -614,7 +778,7 @@ if __name__ == '__main__':
     Chats.create_table()
     MessageLog.create_table()
 
-    GarbageCleaner = Process(target=garbage_collector, args=())
+    GarbageCleaner = Process(target=process_garbage_collector, args=())
     GarbageCleaner.start()
 
     while True:
