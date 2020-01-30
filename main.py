@@ -28,7 +28,7 @@ Cobb = telebot.TeleBot(bot_token)
 db = SqliteDatabase('JayneCobbDatabase.db', check_same_thread=False)
 db_messages = SqliteDatabase('JayneCobbDatabase_messages.db', check_same_thread=False)
 logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="INFO")
-logger.add("Cobb.log", rotation="1 MB", enqueue=True)
+logger.add("Cobb.log", rotation="10 MB", enqueue=True)
 
 restart_flag = False
 
@@ -139,7 +139,7 @@ def func_restarter():
 restart_cid = func_restarter()
 if restart_cid is not None:
     Cobb.send_message(restart_cid, "Новый код принят и запущен.")
-    logger.info("Bot live at %s" % datetime.time)
+    logger.info("Bot live at %s" % datetime.datetime.now())
 
 
 @logger.catch
@@ -150,7 +150,7 @@ def func_restart_writer(cid):
 
 
 @logger.catch
-def func_clean(message):
+def func_clean(message, log=True):
     func_log_chat_message(message, marked_to_delete=True)
     logger.info("Message %s in chat %s (%s) marked for deleting" % (
         message.message_id, message.chat.title, message.chat.id))
@@ -299,7 +299,7 @@ def func_rm_quote(message, qid):
 
 def func_log_chat_message(message, marked_to_delete=False):
     try:
-        spl = message.text.split(' ')
+        spl = message.text.split(" ")
         if spl[0] in ['/warn', '/mute', '/ban', '/unwarn']:
             mod_command = True
         else:
@@ -379,6 +379,7 @@ def func_callback_query_factory(callback_code, *args):
 @Cobb.message_handler(commands=['status'])
 def bot_status(message):
     try:
+        func_log_chat_message(message)
         if message.from_user.id == settings.master_id:
             func_log_chat_message(message)
             query = Chats.select().where(Chats.chat_id == message.chat.id).get()
@@ -395,7 +396,12 @@ def bot_status(message):
                    "Remove voices: %s" % (query.chat_id, query.chat_title, query.chat_link, query.rules_text,
                                           query.welcome_set, query.welcome_text, query.log_text, query.log_pics,
                                           query.antibot, query.antibot_text, query.rm_voices)
-            func_clean(Cobb.reply_to(message, text))
+
+            dn = os.path.dirname(os.path.realpath(__file__))
+            fn = os.path.join(dn, "Cobb.log")
+            f = open(fn, 'r')
+            Cobb.send_document(message.chat.id, f, caption=text)
+            f.close()
     except Exception as e:
         print(e)
 
