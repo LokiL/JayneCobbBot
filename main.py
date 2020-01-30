@@ -93,6 +93,18 @@ class Chats(Model):
         database = db
 
 
+class Quotes(Model):
+    chat_id = IntegerField()
+    submited_by = CharField()
+    added = DateField()
+    author_id = IntegerField()
+    author = CharField()
+    text = CharField()
+
+    class Meta:
+        database = db
+
+
 @logger.catch
 def func_restarter():
     # returns True if restart was initiated and removes file-marker, False - if file is not exists and create him
@@ -135,12 +147,11 @@ def func_add_new_user(message, given_uid=None):
         uid = given_uid
     cid = message.chat.id
 
-    is_boss = False
-    if uid == settings.master_id:
-        is_boss = True
-
     subquery = Users.select().where((Users.user_id == uid) & (Users.chat_id == cid))
     if not subquery.exists():
+        is_boss = False
+        if uid == settings.master_id:
+            is_boss = True
         Users.insert(user_id=uid,
                      chat_id=cid,
                      first_join=datetime.datetime.now(),
@@ -212,7 +223,64 @@ def func_user_is_not_exists(message):
                              "Видимо, он еще не писал в чате с момента моего включения."))
 
 
-def log_chat_message(message, marked_to_delete=False):
+def func_add_quote(message):
+    try:
+        if message.reply_to_message is None:
+            func_clean(Cobb.reply_to(message,
+                                     "Команду можно использовать только ответом на текстовое сообщение."))
+        else:
+            log_entry = {'chat_id': message.chat.id, "submited_by": message.from_user.username,
+                         "added": datetime.datetime.now(),
+                         "author_id": message.reply_to_message.from_user.id,
+                         "author": message.reply_to_message.from_user.username,
+                         "text": message.reply_to_message.text}
+            for key, value in log_entry.items():
+                if log_entry[key] is None:
+                    log_entry[key] = ''
+            if log_entry["text"] != "":
+                with db_messages.atomic():
+                    Quotes.create(**log_entry)
+                Cobb.reply_to(message.reply_to_message, "Сообщение успешно сохранено в базе данных.")
+            else:
+                func_clean(Cobb.reply_to(message.reply_to_message, "В сообщении нет текста."))
+    except Exception as e:
+        logger.exception(e)
+
+
+def func_get_quote(message, qid=None):
+    if qid is None:
+        query = Quotes.select().where(Quotes.chat_id == message.chat.id).order_by(fn.Random()).limit(1).get()
+        reply_text = "```%s:```\n```%s```\n\n#%s submitted by %s at %s" % (
+            query.author, query.text, query.id, query.submited_by, query.added)
+        Cobb.reply_to(message, reply_text, parse_mode='Markdown')
+    else:
+        if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
+            query = Quotes.select().where(Quotes.chat_id == message.chat.id, Quotes.id == qid).get()
+            reply_text = "```%s:```\n```%s```\n\n#%s submitted by %s at %s" % (
+                query.author, query.text, query.id, query.submited_by, query.added)
+            Cobb.reply_to(message, reply_text, parse_mode='Markdown')
+        else:
+            Cobb.reply_to(message, "Цитаты %s не существует." % qid)
+
+
+def func_get_all_quote_ids(message):
+    reply_text = "Всего цитат: %s\n" \
+                 "Номера доступных цитат: " % Quotes.select().where(Quotes.chat_id == message.chat.id).count()
+    for quote in Quotes.select().where(Quotes.chat_id == message.chat.id):
+        reply_text += str(quote.id) + ", "
+    Cobb.reply_to(message, reply_text[:-2])
+
+
+def func_rm_quote(message, qid):
+    if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
+        query = Quotes.delete().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid))
+        query.execute()
+        Cobb.reply_to(message, "Цитата %s успешно удалена." % qid)
+    else:
+        Cobb.reply_to(message, "Цитаты %s не существует." % qid)
+
+
+def func_log_chat_message(message, marked_to_delete=False):
     try:
         spl = message.text.split(' ')
         if spl[0] in ['/warn', '/mute', '/ban', '/unwarn']:
@@ -354,6 +422,7 @@ def bot_antibot_trigger(message):
                 uname, uid, title, cid))
     else:
         Cobb.reply_to(message, "Nope.")
+
 
 @Cobb.message_handler(commands=['welcome'])
 @logger.catch
@@ -767,6 +836,27 @@ def bot_listener(message):
         if Chats.get(Chats.chat_id == cid).log_text:
             func_log_chat_message(message)
 
+        if message.text.startswith("!"):
+
+            if message.text == "!aquote":
+                func_add_quote(message)
+            if message.text.startswith("!rmquote"):
+                spl = message.text.split(' ')
+                if len(spl) != 1 and spl[1].isdigit():
+                    func_rm_quote(message, int(spl[1]))
+                else:
+                    Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
+            if message.text.startswith("!quote"):
+                spl = message.text.split(' ')
+                if len(spl) == 1:
+                    func_get_quote(message)
+                elif not spl[1].isdigit():
+                    Cobb.reply_to(message, "Номер цитаты невалиден")
+                else:
+                    func_get_quote(message, int(spl[1]))
+            if message.text == "!allquotes":
+                func_get_all_quote_ids(message)
+
     else:
         pass
 
@@ -777,6 +867,7 @@ if __name__ == '__main__':
     Users.create_table()
     Chats.create_table()
     MessageLog.create_table()
+    Quotes.create_table()
 
     GarbageCleaner = Process(target=process_garbage_collector, args=())
     GarbageCleaner.start()
