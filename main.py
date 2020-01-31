@@ -281,11 +281,14 @@ def func_get_quote(message, qid=None):
 
 
 def func_get_all_quote_ids(message):
-    reply_text = "Всего цитат: %s\n" \
-                 "Номера доступных цитат: " % Quotes.select().where(Quotes.chat_id == message.chat.id).count()
-    for quote in Quotes.select().where(Quotes.chat_id == message.chat.id):
-        reply_text += str(quote.id) + ", "
-    Cobb.reply_to(message, reply_text[:-2])
+    if Quotes.select().where(Quotes.chat_id == message.chat.id).exists():
+        reply_text = "Всего цитат: %s\n" \
+                     "Номера доступных цитат: " % Quotes.select().where(Quotes.chat_id == message.chat.id).count()
+        for quote in Quotes.select().where(Quotes.chat_id == message.chat.id):
+            reply_text += str(quote.id) + ", "
+        Cobb.reply_to(message, reply_text[:-2])
+    else:
+        Cobb.reply_to(message, "К сожалению, для этого чата не было сохранено ни одной цитаты.")
 
 
 def func_rm_quote(message, qid):
@@ -375,6 +378,35 @@ def func_callback_query_factory(callback_code, *args):
         callback_text += "|" + str(arg)
     return callback_text
 
+@Cobb.message_handler(commands=['aquote'])
+@logger.catch
+def bot_add_quote(message):
+    func_add_quote(message)
+
+@Cobb.message_handler(commands=['rmquote'])
+@logger.catch
+def bot_remove_quote(message):
+    spl = message.text.split(' ')
+    if len(spl) != 1 and spl[1].isdigit():
+        func_rm_quote(message, int(spl[1]))
+    else:
+        Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
+
+@Cobb.message_handler(commands=['quote'])
+@logger.catch
+def bot_get_quote(message):
+    spl = message.text.split(' ')
+    if len(spl) == 1:
+        func_get_quote(message)
+    elif not spl[1].isdigit():
+        Cobb.reply_to(message, "Номер цитаты невалиден")
+    else:
+        func_get_quote(message, int(spl[1]))
+
+@Cobb.message_handler(commands=['allquotes'])
+@logger.catch
+def bot_get_all_quotes(message):
+    func_get_all_quote_ids(message)
 
 @Cobb.message_handler(commands=['status'])
 def bot_status(message):
@@ -980,35 +1012,7 @@ def bot_roll_dice(message):
     except Exception as e:
         logger.exception(e)
 
-@Cobb.message_handler(commands=['aquote'])
-@logger.catch
-def bot_add_quote(message):
-    func_add_quote(message)
 
-@Cobb.message_handler(commands=['rmquote'])
-@logger.catch
-def bot_remove_quote(message):
-    spl = message.text.split(' ')
-    if len(spl) != 1 and spl[1].isdigit():
-        func_rm_quote(message, int(spl[1]))
-    else:
-        Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
-
-@Cobb.message_handler(commands=['quote'])
-@logger.catch
-def bot_get_quote(message):
-    spl = message.text.split(' ')
-    if len(spl) == 1:
-        func_get_quote(message)
-    elif not spl[1].isdigit():
-        Cobb.reply_to(message, "Номер цитаты невалиден")
-    else:
-        func_get_quote(message, int(spl[1]))
-
-@Cobb.message_handler(commands=['quote'])
-@logger.catch
-def bot_get_all_quotes(message):
-    func_get_all_quote_ids(message)
 
 @Cobb.message_handler(commands=['commands'])
 @logger.catch
