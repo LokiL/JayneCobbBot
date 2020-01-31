@@ -257,7 +257,7 @@ def func_add_quote(message):
             if log_entry["text"] != "":
                 with db_messages.atomic():
                     Quotes.create(**log_entry)
-                Cobb.reply_to(message.reply_to_message, "Сообщение успешно сохранено в базе данных.")
+                Cobb.reply_to(message.reply_to_message, "Сообщение успешно сохранено в цитатник.")
             else:
                 func_clean(Cobb.reply_to(message.reply_to_message, "В сообщении нет текста."))
     except Exception as e:
@@ -267,13 +267,13 @@ def func_add_quote(message):
 def func_get_quote(message, qid=None):
     if qid is None:
         query = Quotes.select().where(Quotes.chat_id == message.chat.id).order_by(fn.Random()).limit(1).get()
-        reply_text = "```%s:```\n```%s```\n\n#%s submitted by %s at %s" % (
+        reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
             query.author, query.text, query.id, query.submited_by, query.added)
         Cobb.reply_to(message, reply_text, parse_mode='Markdown')
     else:
         if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
             query = Quotes.select().where(Quotes.chat_id == message.chat.id, Quotes.id == qid).get()
-            reply_text = "```%s:```\n```%s```\n\n#%s submitted by %s at %s" % (
+            reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
                 query.author, query.text, query.id, query.submited_by, query.added)
             Cobb.reply_to(message, reply_text, parse_mode='Markdown')
         else:
@@ -980,6 +980,49 @@ def bot_roll_dice(message):
     except Exception as e:
         logger.exception(e)
 
+@Cobb.message_handler(commands=['aquote'])
+@logger.catch
+def bot_add_quote(message):
+    func_add_quote(message)
+
+@Cobb.message_handler(commands=['rmquote'])
+@logger.catch
+def bot_remove_quote(message):
+    spl = message.text.split(' ')
+    if len(spl) != 1 and spl[1].isdigit():
+        func_rm_quote(message, int(spl[1]))
+    else:
+        Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
+
+@Cobb.message_handler(commands=['quote'])
+@logger.catch
+def bot_get_quote(message):
+    spl = message.text.split(' ')
+    if len(spl) == 1:
+        func_get_quote(message)
+    elif not spl[1].isdigit():
+        Cobb.reply_to(message, "Номер цитаты невалиден")
+    else:
+        func_get_quote(message, int(spl[1]))
+
+@Cobb.message_handler(commands=['quote'])
+@logger.catch
+def bot_get_all_quotes(message):
+    func_get_all_quote_ids(message)
+
+@Cobb.message_handler(commands=['commands'])
+@logger.catch
+def bot_get_command_list(message):
+    func_clean(Cobb.send_message(message.chat.id, "Общий список команд:\n"
+                                                  "/rules - вывести правила чата;\n"
+                                                  "/roll - бросок d100\n"
+                                                  "/whois - профиль в базе бота\n"
+                                                  "/me [что-то] - сообщение вида @твой юзернейм [что-то]\n"
+                                                  "/slap - @кто-то - сообщение '@<ты> slaps @<кто-то> around a bit with a large trout'\n"
+                                                  "/message_top - топ-5 по сообщениям за все время и за последние 30 дней\n"
+                                                  "/aquote - реплаем, добавить сообщение в базу цитатника\n"
+                                                  "/quote или /quote # - вывести случайную цитату или цитату #\n"
+                                                  "/allquotes - вывести список доступных номеров цитат"))
 
 @Cobb.message_handler(content_types=['text'])
 @logger.catch
@@ -992,26 +1035,26 @@ def bot_listener(message):
             if Chats.get(Chats.chat_id == cid).log_text:
                 func_log_chat_message(message)
 
-            if message.text.startswith("!"):
-
-                if message.text == "!aquote":
-                    func_add_quote(message)
-                if message.text.startswith("!rmquote"):
-                    spl = message.text.split(' ')
-                    if len(spl) != 1 and spl[1].isdigit():
-                        func_rm_quote(message, int(spl[1]))
-                    else:
-                        Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
-                if message.text.startswith("!quote"):
-                    spl = message.text.split(' ')
-                    if len(spl) == 1:
-                        func_get_quote(message)
-                    elif not spl[1].isdigit():
-                        Cobb.reply_to(message, "Номер цитаты невалиден")
-                    else:
-                        func_get_quote(message, int(spl[1]))
-                if message.text == "!allquotes":
-                    func_get_all_quote_ids(message)
+            # if message.text.startswith("!"):
+            #
+            #     if message.text == "!aquote":
+            #         func_add_quote(message)
+            #     if message.text.startswith("!rmquote"):
+            #         spl = message.text.split(' ')
+            #         if len(spl) != 1 and spl[1].isdigit():
+            #             func_rm_quote(message, int(spl[1]))
+            #         else:
+            #             Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
+            #     if message.text.startswith("!quote"):
+            #         spl = message.text.split(' ')
+            #         if len(spl) == 1:
+            #             func_get_quote(message)
+            #         elif not spl[1].isdigit():
+            #             Cobb.reply_to(message, "Номер цитаты невалиден")
+            #         else:
+            #             func_get_quote(message, int(spl[1]))
+            #     if message.text == "!allquotes":
+            #         func_get_all_quote_ids(message)
 
             if message.text.startswith("/"):
                 available_links = chatlinks_loader()
