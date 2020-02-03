@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 # coding=utf-8
 import argparse
-import random
-from peewee import *
-import os
-import sys
-import signal
-import time
-import telebot
-import datetime
-from multiprocessing import Process, freeze_support
-from loguru import logger
 import csv
-import settings
+import datetime
+import os
+import random
 import re
+import signal
+import sys
+import time
+from multiprocessing import Process, freeze_support
+
+import telebot
+from loguru import logger
+from peewee import *
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+import settings
 
 parser = argparse.ArgumentParser(add_help=True, description='Cobb Bot for Telegram')
 parser.add_argument('--token', action='store', help='Authentication token [required]', required=True)
@@ -111,8 +113,6 @@ class ChatLinks(Model):
 
     class Meta:
         database = db
-
-
 
 
 @logger.catch
@@ -379,10 +379,12 @@ def func_callback_query_factory(callback_code, *args):
         callback_text += "|" + str(arg)
     return callback_text
 
+
 @Cobb.message_handler(commands=['aquote'])
 @logger.catch
 def bot_add_quote(message):
     func_add_quote(message)
+
 
 @Cobb.message_handler(commands=['rmquote'])
 @logger.catch
@@ -392,6 +394,7 @@ def bot_remove_quote(message):
         func_rm_quote(message, int(spl[1]))
     else:
         Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
+
 
 @Cobb.message_handler(commands=['quote'])
 @logger.catch
@@ -404,10 +407,12 @@ def bot_get_quote(message):
     else:
         func_get_quote(message, int(spl[1]))
 
+
 @Cobb.message_handler(commands=['allquotes'])
 @logger.catch
 def bot_get_all_quotes(message):
     func_get_all_quote_ids(message)
+
 
 @Cobb.message_handler(commands=['status'])
 def bot_status(message):
@@ -751,6 +756,7 @@ def bot_log_chat_trigger(message):
     else:
         Cobb.reply_to(message, "Nope.")
 
+
 @logger.catch
 def bot_automodify_karma(message):
     try:
@@ -1035,7 +1041,6 @@ def bot_roll_dice(message):
         logger.exception(e)
 
 
-
 @Cobb.message_handler(commands=['commands'])
 @logger.catch
 def bot_get_command_list(message):
@@ -1051,6 +1056,25 @@ def bot_get_command_list(message):
                                                   "/aquote - реплаем, добавить сообщение в базу цитатника\n"
                                                   "/quote или /quote # - вывести случайную цитату или цитату #\n"
                                                   "/allquotes - вывести список доступных номеров цитат"))
+
+
+@Cobb.message_handler(commands=['moder_commands'])
+@logger.catch
+def bot_get_command_list(message):
+    func_clean(Cobb.send_message(message.chat.id, "Общий список модераторских команд:\n"
+                                                  "/setrules [текст]- задать правила чата, ограниченный доступ\n"
+                                                  "/welcome - ограниченный доступ, включить приветственное сообщение\n"
+                                                  "/antibot - ограниченный доступ, включить антибота\n"
+                                                  "/rmrules - стереть правила чата, ограниченный доступ\n"
+                                                  "/mute - [time] [m/d/h] [причина] ответом, ограниченный доступ:  мут на указанное время.\n"
+                                                  "/ban [причина] ответом, ограниченный доступ: бан юзера\n"
+                                                  "/warn [причина] ответом, ограниченный доступ: текстовое предупреждение c причиной.\n"
+                                                  "/unwarn ответом, ограниченный доступ: уменьшить количество варнов юзера на 1\n"
+                                                  "/title [титул] ответом, изменить титул пользователя, отображается в whois, ограниченный доступ\n"
+                                                  "/rm_voice ограниченный доступ, отключить/включить удаление войсов в чате\n"
+                                                  "/rbt - доступно мастеру, перезагрузка бота\n"
+                                                  "/status - доступно мастеру, статус бота и логи"))
+
 
 @Cobb.message_handler(content_types=['text'])
 @logger.catch
