@@ -14,7 +14,6 @@ from loguru import logger
 import csv
 import settings
 import re
-from telebot import apihelper
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 parser = argparse.ArgumentParser(add_help=True, description='Cobb Bot for Telegram')
@@ -805,7 +804,7 @@ def bot_set_user_title(message):
             func_user_is_not_exists(message)
         else:
 
-            updated_user = Users.update(custom_title=new_title).where((Users.user_id == uid) & (Users.chat_id == cid))
+            updated_user = Users.update(custom_title=new_title).where(Users.user_id == uid)
             updated_user.execute()
             title_change_info = "Титул для %s успешно изменен: %s" % (
                 Cobb.get_chat_member(message.chat.id, uid).user.first_name,
