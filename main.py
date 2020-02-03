@@ -113,6 +113,8 @@ class ChatLinks(Model):
         database = db
 
 
+
+
 @logger.catch
 def chatlinks_loader():
     available_links = {}
@@ -213,9 +215,9 @@ def func_add_new_chat_or_change_info(message):
 def func_karma_change(cid, uid, change):
     #     change inc/dec == +/-
     if change == 1:
-        updated_user = Users.update(karma=Users.karma + 1).where((Users.user_id == uid) & (Users.chat_id == cid))
+        updated_user = Users.update(karma=Users.karma + 1).where(Users.user_id == uid)
     else:
-        updated_user = Users.update(karma=Users.karma - 1).where((Users.user_id == uid) & (Users.chat_id == cid))
+        updated_user = Users.update(karma=Users.karma - 1).where(Users.user_id == uid)
     updated_user.execute()
 
 
@@ -749,8 +751,29 @@ def bot_log_chat_trigger(message):
     else:
         Cobb.reply_to(message, "Nope.")
 
+@logger.catch
+def bot_automodify_karma(message):
+    try:
+        func_add_new_user(message)
+        cid = message.chat.id
+        uid = message.reply_to_message.from_user.id
 
-@Cobb.message_handler(commands=['+', '-'])
+        for word in settings.karma_up_list:
+            if word in message.text.lower():
+                func_karma_change(cid, uid, 1)
+        for word in settings.karma_down_list:
+            if word in message.text.lower():
+                func_karma_change(cid, uid, -1)
+
+        func_clean(Cobb.reply_to(message, "Карма изменена для %s, текущее значение: %s" %
+                                 (Cobb.get_chat_member(cid, uid).user.first_name,
+                                  Users.select().where(
+                                      (Users.user_id == uid) & (Users.chat_id == cid)).get().karma)))
+    except Exception as e:
+        logger.exception(e)
+
+
+@Cobb.message_handler(commands=['upvote', 'downvote'])
 @logger.catch
 def bot_modify_karma(message):
     func_add_new_user(message)
@@ -1038,26 +1061,7 @@ def bot_listener(message):
             if Chats.get(Chats.chat_id == cid).log_text:
                 func_log_chat_message(message)
 
-            # if message.text.startswith("!"):
-            #
-            #     if message.text == "!aquote":
-            #         func_add_quote(message)
-            #     if message.text.startswith("!rmquote"):
-            #         spl = message.text.split(' ')
-            #         if len(spl) != 1 and spl[1].isdigit():
-            #             func_rm_quote(message, int(spl[1]))
-            #         else:
-            #             Cobb.reply_to(message, "Номер цитаты либо не указан, либо не является числом.")
-            #     if message.text.startswith("!quote"):
-            #         spl = message.text.split(' ')
-            #         if len(spl) == 1:
-            #             func_get_quote(message)
-            #         elif not spl[1].isdigit():
-            #             Cobb.reply_to(message, "Номер цитаты невалиден")
-            #         else:
-            #             func_get_quote(message, int(spl[1]))
-            #     if message.text == "!allquotes":
-            #         func_get_all_quote_ids(message)
+            bot_automodify_karma(message)
 
             if message.text.startswith("/"):
                 available_links = chatlinks_loader()
