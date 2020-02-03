@@ -790,7 +790,7 @@ def bot_modify_karma(message):
         if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
             func_user_is_not_exists(message)
         else:
-            if message.text == '/upvote':
+            if '/upvote' in message.text:
                 func_karma_change(cid, uid, 1)
             else:
                 func_karma_change(cid, uid, -1)
@@ -1040,6 +1040,8 @@ def bot_roll_dice(message):
 @logger.catch
 def bot_get_command_list(message):
     func_clean(Cobb.send_message(message.chat.id, "Общий список команд:\n"
+                                                  "/upvote - повысить карму\n"
+                                                  "/downvote - понизить карму\n"
                                                   "/rules - вывести правила чата;\n"
                                                   "/roll - бросок d100\n"
                                                   "/whois - профиль в базе бота\n"
