@@ -790,7 +790,7 @@ def bot_modify_karma(message):
         if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
             func_user_is_not_exists(message)
         else:
-            if message.text == '/+':
+            if message.text == '/upvote':
                 func_karma_change(cid, uid, 1)
             else:
                 func_karma_change(cid, uid, -1)
@@ -1061,7 +1061,7 @@ def bot_listener(message):
             if Chats.get(Chats.chat_id == cid).log_text:
                 func_log_chat_message(message)
 
-            bot_automodify_karma(message)
+            # bot_automodify_karma(message)
 
             if message.text.startswith("/"):
                 available_links = chatlinks_loader()
