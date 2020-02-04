@@ -659,7 +659,7 @@ def bot_message_top(message):
     for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
         if iter == 6:
             break
-        top_all += "%s. @%s - %s\n" % (iter, key, value)
+        top_all += "``` %s. @%s - %s```\n" % (iter, key, value)
         iter += 1
 
     for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
@@ -672,9 +672,9 @@ def bot_message_top(message):
     for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
         if iter == 6:
             break
-        top_month += "%s. @%s - %s\n" % (iter, key, value)
+        top_month += "``` %s. @%s - %s ```\n" % (iter, key, value)
         iter += 1
-    func_clean(Cobb.reply_to(message, top_all + "\n" + top_month))
+    func_clean(Cobb.reply_to(message, top_all + "\n" + top_month, parse_mode="markdown"))
 
     # for us in MessageLog.select(MessageLog.owner, MessageLog.from_user_username).join(Users, JOIN.INNER).where(
     #         MessageLog.owner == Users.user_id).distinct():
