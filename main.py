@@ -188,21 +188,26 @@ def func_add_new_chat_or_change_info(message):
 
     if message.chat.type != 'private':
 
-        subquery = Chats.select().where(Chats.chat_id == cid)
-        if not subquery.exists():
-            Chats.insert(chat_id=cid,
-                         chat_title=message.chat.title,
-                         chat_link=Cobb.export_chat_invite_link(cid),
-                         rules_text="",
-                         log_text=True,
-                         log_pics=False,
-                         antibot=False,
-                         antibot_text=settings.antibot_welcome_default,
-                         welcome_set=False,
-                         welcome_text=settings.welcome_default,
-                         rm_voices=True).execute()
+        if not Chats.select().where(Chats.chat_id == cid).exists():
+            try:
+                link = Cobb.export_chat_invite_link(cid)
+            except Exception as e:
+                logger.exception(e)
+                link = ""
+            finally:
+                Chats.insert(chat_id=cid,
+                             chat_title=message.chat.title,
+                             chat_link=link,
+                             rules_text="",
+                             log_text=True,
+                             log_pics=False,
+                             antibot=False,
+                             antibot_text=settings.antibot_welcome_default,
+                             welcome_set=False,
+                             welcome_text=settings.welcome_default,
+                             rm_voices=True).execute()
 
-            logger.info("New chat %s (%s) added to database" % (message.chat.title, cid))
+                logger.info("New chat %s (%s) added to database" % (message.chat.title, cid))
         else:
             if Chats.select().where(Chats.chat_id == cid).get().chat_title != message.chat.title:
                 update_chat_title = Chats.update(chat_title=message.chat.title).where(Chats.chat_id == cid)
@@ -782,7 +787,6 @@ def bot_automodify_karma(message):
 @Cobb.message_handler(commands=['upvote', 'downvote'])
 @logger.catch
 def bot_modify_karma(message):
-
     if message.reply_to_message.from_user.id == Cobb.get_me():
         func_clean(Cobb.reply_to(message, "Я бот, я металлическ и звенящ, и у меня нет кармы."))
     else:
