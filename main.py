@@ -193,7 +193,7 @@ def func_add_new_chat_or_change_info(message):
                 link = Cobb.export_chat_invite_link(cid)
             except Exception as e:
                 logger.exception(e)
-                link = ""
+                link = "Chat link is unavialable"
             finally:
                 Chats.insert(chat_id=cid,
                              chat_title=message.chat.title,
