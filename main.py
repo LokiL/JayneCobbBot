@@ -184,46 +184,56 @@ def func_add_new_user(message, given_uid=None):
 
 @logger.catch
 def func_add_new_chat_or_change_info(message):
-    cid = message.chat.id
+    try:
+        cid = message.chat.id
 
-    if message.chat.type != 'private':
+        if message.chat.type != 'private':
 
-        if not Chats.select().where(Chats.chat_id == cid).exists():
-            try:
-                link = Cobb.export_chat_invite_link(cid)
-            except Exception as e:
-                logger.exception(e)
-                link = "Chat link is unavialable"
-            finally:
-                Chats.insert(chat_id=cid,
-                             chat_title=message.chat.title,
-                             chat_link=link,
-                             rules_text="",
-                             log_text=True,
-                             log_pics=False,
-                             antibot=False,
-                             antibot_text=settings.antibot_welcome_default,
-                             welcome_set=False,
-                             welcome_text=settings.welcome_default,
-                             rm_voices=True).execute()
+            if not Chats.select().where(Chats.chat_id == cid).exists():
+                try:
+                    link = Cobb.export_chat_invite_link(cid)
+                except Exception as e:
+                    logger.exception(e)
+                    link = "Chat link is unavialable"
+                finally:
+                    Chats.insert(chat_id=cid,
+                                 chat_title=message.chat.title,
+                                 chat_link=link,
+                                 rules_text="",
+                                 log_text=True,
+                                 log_pics=False,
+                                 antibot=False,
+                                 antibot_text=settings.antibot_welcome_default,
+                                 welcome_set=False,
+                                 welcome_text=settings.welcome_default,
+                                 rm_voices=True).execute()
 
-                logger.info("New chat %s (%s) added to database" % (message.chat.title, cid))
-        else:
-            if Chats.select().where(Chats.chat_id == cid).get().chat_title != message.chat.title:
-                update_chat_title = Chats.update(chat_title=message.chat.title).where(Chats.chat_id == cid)
-                update_chat_title.execute()
+                    logger.info("New chat %s (%s) added to database" % (message.chat.title, cid))
+                    try:
+                        Cobb.send_message(settings.master_id, "New chat %s (%s) added to database" % (message.chat.title, cid))
+                    except Exception as e:
+                        logger.exception(e)
+            else:
+                if Chats.select().where(Chats.chat_id == cid).get().chat_title != message.chat.title:
+                    update_chat_title = Chats.update(chat_title=message.chat.title).where(Chats.chat_id == cid)
+                    update_chat_title.execute()
 
-                logger.info("Chat %s changed name to %s" % (cid, message.chat.title))
+                    logger.info("Chat %s changed name to %s" % (cid, message.chat.title))
+    except Exception as e:
+        logger.exception(e)
 
 
 @logger.catch
 def func_karma_change(cid, uid, change):
-    #     change inc/dec == +/-
-    if change == 1:
-        updated_user = Users.update(karma=Users.karma + 1).where(Users.user_id == uid)
-    else:
-        updated_user = Users.update(karma=Users.karma - 1).where(Users.user_id == uid)
-    updated_user.execute()
+    try:
+        #     change inc/dec == +/-
+        if change == 1:
+            updated_user = Users.update(karma=Users.karma + 1).where(Users.user_id == uid)
+        else:
+            updated_user = Users.update(karma=Users.karma - 1).where(Users.user_id == uid)
+        updated_user.execute()
+    except Exception as e:
+        logger.exception(e)
 
 
 @logger.catch
@@ -271,39 +281,48 @@ def func_add_quote(message):
 
 
 def func_get_quote(message, qid=None):
-    if qid is None:
-        query = Quotes.select().order_by(fn.Random()).limit(1).get()
-        reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
-            query.author, query.text, query.id, query.submited_by, query.added)
-        Cobb.reply_to(message, reply_text, parse_mode='Markdown')
-    else:
-        if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
-            query = Quotes.select().where(Quotes.chat_id == message.chat.id, Quotes.id == qid).get()
+    try:
+        if qid is None:
+            query = Quotes.select().order_by(fn.Random()).limit(1).get()
             reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
                 query.author, query.text, query.id, query.submited_by, query.added)
             Cobb.reply_to(message, reply_text, parse_mode='Markdown')
         else:
-            Cobb.reply_to(message, "Цитаты %s не существует." % qid)
+            if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
+                query = Quotes.select().where(Quotes.chat_id == message.chat.id, Quotes.id == qid).get()
+                reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
+                    query.author, query.text, query.id, query.submited_by, query.added)
+                Cobb.reply_to(message, reply_text, parse_mode='Markdown')
+            else:
+                Cobb.reply_to(message, "Цитаты %s не существует." % qid)
+    except Exception as e:
+        logger.exception(e)
 
 
 def func_get_all_quote_ids(message):
-    if Quotes.select().where().exists():
-        reply_text = "Всего цитат: %s\n" \
-                     "Номера доступных цитат: " % Quotes.select().where(Quotes.chat_id == message.chat.id).count()
-        for quote in Quotes.select().where(Quotes.chat_id == message.chat.id):
-            reply_text += str(quote.id) + ", "
-        Cobb.reply_to(message, reply_text[:-2])
-    else:
-        Cobb.reply_to(message, "К сожалению, для этого чата не было сохранено ни одной цитаты.")
+    try:
+        if Quotes.select().where().exists():
+            reply_text = "Всего цитат: %s\n" \
+                         "Номера доступных цитат: " % Quotes.select().where(Quotes.chat_id == message.chat.id).count()
+            for quote in Quotes.select().where(Quotes.chat_id == message.chat.id):
+                reply_text += str(quote.id) + ", "
+            Cobb.reply_to(message, reply_text[:-2])
+        else:
+            Cobb.reply_to(message, "К сожалению, для этого чата не было сохранено ни одной цитаты.")
+    except Exception as e:
+        logger.exception(e)
 
 
 def func_rm_quote(message, qid):
-    if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
-        query = Quotes.delete().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid))
-        query.execute()
-        Cobb.reply_to(message, "Цитата %s успешно удалена." % qid)
-    else:
-        Cobb.reply_to(message, "Цитаты %s не существует." % qid)
+    try:
+        if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
+            query = Quotes.delete().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid))
+            query.execute()
+            Cobb.reply_to(message, "Цитата %s успешно удалена." % qid)
+        else:
+            Cobb.reply_to(message, "Цитаты %s не существует." % qid)
+    except Exception as e:
+        logger.exception(e)
 
 
 def func_log_chat_message(message, marked_to_delete=False):
