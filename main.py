@@ -286,17 +286,18 @@ def func_get_quote(message, qid=None):
             query = Quotes.select().order_by(fn.Random()).limit(1).get()
             reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
                 query.author, query.text, query.id, query.submited_by, query.added)
-            Cobb.reply_to(message, reply_text, parse_mode='Markdown')
+            Cobb.reply_to(message, reply_text)
         else:
             if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
                 query = Quotes.select().where(Quotes.chat_id == message.chat.id, Quotes.id == qid).get()
                 reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
                     query.author, query.text, query.id, query.submited_by, query.added)
-                Cobb.reply_to(message, reply_text, parse_mode='Markdown')
+                Cobb.reply_to(message, reply_text)
             else:
                 Cobb.reply_to(message, "Цитаты %s не существует." % qid)
     except Exception as e:
         logger.exception(e)
+
 
 
 def func_get_all_quote_ids(message):
@@ -315,8 +316,8 @@ def func_get_all_quote_ids(message):
 
 def func_rm_quote(message, qid):
     try:
-        if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
-            query = Quotes.delete().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid))
+        if Quotes.select().where(Quotes.id == qid).exists():
+            query = Quotes.delete().where(Quotes.id == qid)
             query.execute()
             Cobb.reply_to(message, "Цитата %s успешно удалена." % qid)
         else:
