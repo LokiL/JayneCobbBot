@@ -791,36 +791,39 @@ def bot_automodify_karma(message):
 @Cobb.message_handler(commands=['upvote', 'downvote'])
 @logger.catch
 def bot_modify_karma(message):
-    if message.reply_to_message is None:
-        func_clean(
-            Cobb.reply_to(message,
-                          "Чтобы изменить кому-то карму, нужно ответить на его сообщение командой /upvote или /downvote"))
-    elif message.reply_to_message.from_user.id == Cobb.get_me():
-        func_clean(Cobb.reply_to(message, "Я бот, я металлическ и звенящ, и у меня нет кармы."))
-    else:
-        if message.chat.type != 'private':
-            func_add_new_user(message)
-            if message.from_user.id == message.reply_to_message.from_user.id:
-                func_clean(Cobb.reply_to(message, "Самому себе карму изменить нельзя!"))
-            else:
-                func_log_chat_message(message)
-                cid = message.chat.id
-                uid = message.reply_to_message.from_user.id
-                if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
-                    func_user_is_not_exists(message)
-                else:
-                    if '/upvote' in message.text:
-                        func_karma_change(cid, uid, 1)
-                    else:
-                        func_karma_change(cid, uid, -1)
-                    Cobb.delete_message(message.chat.id, message.message_id)
-                    logger.info("%s changed karma in %s" % (message.from_user.id, message.chat.id))
-                    func_clean(Cobb.reply_to(message, "Карма изменена для %s, текущее значение: %s" %
-                                             (Cobb.get_chat_member(cid, uid).user.first_name,
-                                              Users.select().where(
-                                                  (Users.user_id == uid) & (Users.chat_id == cid)).get().karma)))
+    try:
+        if message.reply_to_message is None:
+            func_clean(
+                Cobb.reply_to(message,
+                              "Чтобы изменить кому-то карму, нужно ответить на его сообщение командой /upvote или /downvote"))
+        elif message.reply_to_message.from_user.id == Cobb.get_me():
+            func_clean(Cobb.reply_to(message, "Я бот, я металлическ и звенящ, и у меня нет кармы."))
         else:
-            Cobb.reply_to(message, "А дрочить себе карму в приватике нехорошо, не надо так.")
+            if message.chat.type != 'private':
+                func_add_new_user(message)
+                if message.from_user.id == message.reply_to_message.from_user.id:
+                    func_clean(Cobb.reply_to(message, "Самому себе карму изменить нельзя!"))
+                else:
+                    func_log_chat_message(message)
+                    cid = message.chat.id
+                    uid = message.reply_to_message.from_user.id
+                    if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
+                        func_user_is_not_exists(message)
+                    else:
+                        if '/upvote' in message.text:
+                            func_karma_change(cid, uid, 1)
+                        else:
+                            func_karma_change(cid, uid, -1)
+                        Cobb.delete_message(message.chat.id, message.message_id)
+                        logger.info("%s changed karma in %s" % (message.from_user.id, message.chat.id))
+                        func_clean(Cobb.reply_to(message, "Карма изменена для %s, текущее значение: %s" %
+                                                 (Cobb.get_chat_member(cid, uid).user.first_name,
+                                                  Users.select().where(
+                                                      (Users.user_id == uid) & (Users.chat_id == cid)).get().karma)))
+            else:
+                Cobb.reply_to(message, "А дрочить себе карму в приватике нехорошо, не надо так.")
+    except Exception as e:
+        logger.exception(e)
 
 
 @Cobb.message_handler(commands=['title'])
