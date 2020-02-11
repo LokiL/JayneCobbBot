@@ -272,7 +272,7 @@ def func_add_quote(message):
 
 def func_get_quote(message, qid=None):
     if qid is None:
-        query = Quotes.select().where(Quotes.chat_id == message.chat.id).order_by(fn.Random()).limit(1).get()
+        query = Quotes.select().where().order_by(fn.Random()).limit(1).get()
         reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
             query.author, query.text, query.id, query.submited_by, query.added)
         Cobb.reply_to(message, reply_text, parse_mode='Markdown')
@@ -287,7 +287,7 @@ def func_get_quote(message, qid=None):
 
 
 def func_get_all_quote_ids(message):
-    if Quotes.select().where(Quotes.chat_id == message.chat.id).exists():
+    if Quotes.select().where().exists():
         reply_text = "Всего цитат: %s\n" \
                      "Номера доступных цитат: " % Quotes.select().where(Quotes.chat_id == message.chat.id).count()
         for quote in Quotes.select().where(Quotes.chat_id == message.chat.id):
