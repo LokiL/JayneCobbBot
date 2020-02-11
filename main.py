@@ -814,12 +814,13 @@ def bot_modify_karma(message):
                             func_karma_change(cid, uid, 1)
                         else:
                             func_karma_change(cid, uid, -1)
-                        Cobb.delete_message(message.chat.id, message.message_id)
+
                         logger.info("%s changed karma in %s" % (message.from_user.id, message.chat.id))
-                        func_clean(Cobb.reply_to(message, "Карма изменена для %s, текущее значение: %s" %
+                        func_clean(Cobb.send_message(message.chat.id, "Карма изменена для %s, текущее значение: %s" %
                                                  (Cobb.get_chat_member(cid, uid).user.first_name,
                                                   Users.select().where(
                                                       (Users.user_id == uid) & (Users.chat_id == cid)).get().karma)))
+                        Cobb.delete_message(message.chat.id, message.message_id)
             else:
                 Cobb.reply_to(message, "А дрочить себе карму в приватике нехорошо, не надо так.")
     except Exception as e:
