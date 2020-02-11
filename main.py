@@ -302,14 +302,11 @@ def func_get_quote(message, qid=None):
 
 def func_get_all_quote_ids(message):
     try:
-        if Quotes.select().where().exists():
-            reply_text = "Всего цитат: %s\n" \
-                         "Номера доступных цитат: " % Quotes.select().where(Quotes.chat_id == message.chat.id).count()
-            for quote in Quotes.select().where(Quotes.chat_id == message.chat.id):
-                reply_text += str(quote.id) + ", "
-            Cobb.reply_to(message, reply_text[:-2])
-        else:
-            Cobb.reply_to(message, "К сожалению, для этого чата не было сохранено ни одной цитаты.")
+        reply_text = "Всего цитат: %s\n" \
+                         "Номера доступных цитат: " % Quotes.select().count()
+        for quote in Quotes.select():
+            reply_text += str(quote.id) + ", "
+        Cobb.reply_to(message, reply_text[:-2])
     except Exception as e:
         logger.exception(e)
 
