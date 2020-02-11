@@ -288,8 +288,8 @@ def func_get_quote(message, qid=None):
                 query.author, query.text, query.id, query.submited_by, query.added)
             Cobb.reply_to(message, reply_text)
         else:
-            if Quotes.select().where((Quotes.chat_id == message.chat.id) & (Quotes.id == qid)).exists():
-                query = Quotes.select().where(Quotes.chat_id == message.chat.id, Quotes.id == qid).get()
+            if Quotes.select().where(Quotes.id == qid).exists():
+                query = Quotes.select().where(Quotes.id == qid).get()
                 reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
                     query.author, query.text, query.id, query.submited_by, query.added)
                 Cobb.reply_to(message, reply_text)
