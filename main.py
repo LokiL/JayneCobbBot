@@ -53,7 +53,7 @@ if args.p_adress is not None:
 bot_token = args.token
 Cobb = telebot.TeleBot(bot_token)
 db = SqliteDatabase('JayneCobbDatabase.db', check_same_thread=False)
-db_messages = SqliteDatabase('JayneCobbDatabase_messages.db', check_same_thread=False)
+# db_messages = SqliteDatabase('JayneCobbDatabase_messages.db', check_same_thread=False)
 
 restart_flag = False
 
@@ -99,7 +99,7 @@ class MessageLog(Model):
     marked_to_delete = BooleanField()
 
     class Meta:
-        database = db_messages
+        database = db
 
 
 class Chats(Model):
@@ -296,7 +296,7 @@ def func_add_quote(message):
                 if log_entry[key] is None:
                     log_entry[key] = ''
             if log_entry["quoted_text"] != "":
-                with db_messages.atomic():
+                with db.atomic():
                     Quotes.create(**log_entry)
                 Cobb.reply_to(message.reply_to_message, "Сообщение успешно сохранено в цитатник.")
             else:
@@ -388,7 +388,7 @@ def func_log_chat_message(message, marked_to_delete=False):
         for key, value in log_entry.items():
             if log_entry[key] is None:
                 log_entry[key] = ''
-        with db_messages.atomic():
+        with db.atomic():
             MessageLog.create(**log_entry)
     except Exception as e:
         logger.critical(e)
@@ -698,7 +698,6 @@ def bot_message_top(message):
     cid = message.chat.id
     top_all = "Топ сообщений у пользователей за все время:\n"
     top_month = "Топ сообщений у пользователей за месяц:\n"
-    top_users = {}
     func_log_chat_message(message)
 
     for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
@@ -1168,7 +1167,6 @@ def bot_listener(message):
 
 
 if __name__ == '__main__':
-
     freeze_support()
 
     Users.create_table()
