@@ -1154,7 +1154,7 @@ def bot_get_command_list(message):
 
 @Cobb.message_handler(commands=['moder_commands'])
 @logger.catch
-def bot_get_command_list(message):
+def bot_get_moder_command_list(message):
     func_clean(Cobb.send_message(message.chat.id, "Общий список модераторских команд:\n"
                                                   "/setrules [текст]- задать правила чата, ограниченный доступ\n"
                                                   "/welcome - ограниченный доступ, включить приветственное сообщение\n"
