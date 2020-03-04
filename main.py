@@ -696,8 +696,9 @@ def bot_message_top(message):
     func_add_new_user(message)
     func_clean(message)
     cid = message.chat.id
-    top_all = "Топ сообщений у пользователей за все время:\n"
-    top_month = "Топ сообщений у пользователей за месяц:\n"
+    top_head = "Количество сообщений у пользователей:\n"
+    top_all = "- за все время:\n"
+    top_month = "- за последние 30 дней:\n"
     func_log_chat_message(message)
 
     query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
@@ -710,7 +711,7 @@ def bot_message_top(message):
 
     query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
         (MessageLog.chat_id == cid) & (
-                MessageLog.message_date > int(time.time()) - 2629743)).group_by(
+                MessageLog.message_date > int(time.time()) - 2592000)).group_by(
         MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
 
     iter = 1
@@ -718,7 +719,7 @@ def bot_message_top(message):
         top_month += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
         iter += 1
 
-    func_clean(Cobb.reply_to(message, top_all + "\n" + top_month, parse_mode="markdown"))
+    func_clean(Cobb.reply_to(message, top_head + top_all + "\n" + top_month, parse_mode="markdown"))
 
     # func_add_new_user(message)
     # func_clean(message)
