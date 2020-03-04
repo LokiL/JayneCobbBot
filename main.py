@@ -682,7 +682,7 @@ def bot_whois(message):
                                                           (MessageLog.from_user_id == uid) & (
                                                                   MessageLog.chat_id == cid) & (
                                                                   MessageLog.message_date > int(
-                                                              time.time()) - 2629743)).count(),
+                                                              time.time()) - 2592000)).count(),
                                                       warn_count=subquery.warn_count)
 
             func_clean(Cobb.reply_to(message, whois_info))
