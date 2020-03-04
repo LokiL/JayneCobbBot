@@ -700,30 +700,58 @@ def bot_message_top(message):
     top_month = "Топ сообщений у пользователей за месяц:\n"
     func_log_chat_message(message)
 
-    for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
-            MessageLog.chat_id == cid).distinct():
-        top_users[unique_users.from_user_username] = MessageLog.select().where(
-            (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
+    query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
+        MessageLog.chat_id == cid).group_by(
+        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(5))
     iter = 1
-    for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
-        if iter == 6:
-            break
-        top_all += "``` %s. @%s - %s```\n" % (iter, key, value)
+    for merged in query:
+        top_all += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
         iter += 1
 
-    for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
-            (MessageLog.chat_id == cid) & (
-                    MessageLog.message_date > int(
-                time.time()) - 2629743)).distinct():
-        top_users[unique_users.from_user_username] = MessageLog.select().where(
-            (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
+    query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
+        (MessageLog.chat_id == cid) & (
+                MessageLog.message_date > int(time.time()) - 2629743)).group_by(
+        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(5))
+
     iter = 1
-    for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
-        if iter == 6:
-            break
-        top_month += "``` %s. @%s - %s ```\n" % (iter, key, value)
+    for merged in query:
+        top_month += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
         iter += 1
+
     func_clean(Cobb.reply_to(message, top_all + "\n" + top_month, parse_mode="markdown"))
+
+    # func_add_new_user(message)
+    # func_clean(message)
+    # cid = message.chat.id
+    # top_all = "Топ сообщений у пользователей за все время:\n"
+    # top_month = "Топ сообщений у пользователей за месяц:\n"
+    # top_users = {}
+    # func_log_chat_message(message)
+    #
+    # for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
+    #         MessageLog.chat_id == cid).distinct():
+    #     top_users[unique_users.from_user_username] = MessageLog.select().where(
+    #         (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
+    # iter = 1
+    # for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
+    #     if iter == 6:
+    #         break
+    #     top_all += "``` %s. @%s - %s```\n" % (iter, key, value)
+    #     iter += 1
+    #
+    # for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
+    #         (MessageLog.chat_id == cid) & (
+    #                 MessageLog.message_date > int(
+    #             time.time()) - 2629743)).distinct():
+    #     top_users[unique_users.from_user_username] = MessageLog.select().where(
+    #         (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
+    # iter = 1
+    # for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
+    #     if iter == 6:
+    #         break
+    #     top_month += "``` %s. @%s - %s ```\n" % (iter, key, value)
+    #     iter += 1
+    # func_clean(Cobb.reply_to(message, top_all + "\n" + top_month, parse_mode="markdown"))
 
     # for us in MessageLog.select(MessageLog.owner, MessageLog.from_user_username).join(Users, JOIN.INNER).where(
     #         MessageLog.owner == Users.user_id).distinct():
