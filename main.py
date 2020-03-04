@@ -702,7 +702,7 @@ def bot_message_top(message):
 
     query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
         MessageLog.chat_id == cid).group_by(
-        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(5))
+        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
     iter = 1
     for merged in query:
         top_all += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
@@ -711,7 +711,7 @@ def bot_message_top(message):
     query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
         (MessageLog.chat_id == cid) & (
                 MessageLog.message_date > int(time.time()) - 2629743)).group_by(
-        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(5))
+        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
 
     iter = 1
     for merged in query:
