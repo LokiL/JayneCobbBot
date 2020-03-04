@@ -20,10 +20,10 @@ import settings
 
 parser = argparse.ArgumentParser(add_help=True, description='Cobb Bot for Telegram')
 parser.add_argument('--token', action='store', help='Authentication token [required]', required=True)
-parser.add_argument('--p_login', action='store', help='Authentication token [required]', required=False)
-parser.add_argument('--p_pass', action='store', help='Authentication token [required]', required=False)
-parser.add_argument('--p_adress', action='store', help='Authentication token [required]', required=False)
-parser.add_argument('--p_port', action='store', help='Authentication token [required]', required=False)
+parser.add_argument('--p_login', action='store', help='Proxy login [optional]', required=False)
+parser.add_argument('--p_pass', action='store', help='Proxy password [optional]', required=False)
+parser.add_argument('--p_adress', action='store', help='Proxy adress [optional]', required=False)
+parser.add_argument('--p_port', action='store', help='Proxy port [optional]', required=False)
 
 csv.register_dialect('localeDialect', quoting=csv.QUOTE_ALL, skipinitialspace=True, lineterminator='\n')
 
