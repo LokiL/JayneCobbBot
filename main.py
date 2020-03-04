@@ -20,16 +20,40 @@ import settings
 
 parser = argparse.ArgumentParser(add_help=True, description='Cobb Bot for Telegram')
 parser.add_argument('--token', action='store', help='Authentication token [required]', required=True)
+parser.add_argument('--p_login', action='store', help='Authentication token [required]', required=False)
+parser.add_argument('--p_pass', action='store', help='Authentication token [required]', required=False)
+parser.add_argument('--p_adress', action='store', help='Authentication token [required]', required=False)
+parser.add_argument('--p_port', action='store', help='Authentication token [required]', required=False)
+
 csv.register_dialect('localeDialect', quoting=csv.QUOTE_ALL, skipinitialspace=True, lineterminator='\n')
 
 args = parser.parse_args()
 
-bot_token = args.token  # Lenore token
+logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="INFO")
+logger.add("Cobb.log", rotation="10 MB", enqueue=True)
+
+if args.p_adress is not None:
+    try:
+        from telebot import apihelper
+
+        apihelper.proxy = {
+            'https': 'socks5h://{proxy_login}:{proxy_password}@{proxy_adress}:{proxy_port}'.format(
+                proxy_login=args.p_login,
+                proxy_password=args.p_pass,
+                proxy_adress=args.p_adress,
+                proxy_port=args.p_port)}
+        logger.info("Started with proxy: {proxy_login}:{proxy_password}@{proxy_adress}:{proxy_port}".format(
+            proxy_login=args.p_login,
+            proxy_password=args.p_pass,
+            proxy_adress=args.p_adress,
+            proxy_port=args.p_port))
+    except Exception as e:
+        logger.exception(e)
+
+bot_token = args.token
 Cobb = telebot.TeleBot(bot_token)
 db = SqliteDatabase('JayneCobbDatabase.db', check_same_thread=False)
 db_messages = SqliteDatabase('JayneCobbDatabase_messages.db', check_same_thread=False)
-logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="INFO")
-logger.add("Cobb.log", rotation="10 MB", enqueue=True)
 
 restart_flag = False
 
@@ -210,7 +234,8 @@ def func_add_new_chat_or_change_info(message):
 
                     logger.info("New chat %s (%s) added to database" % (message.chat.title, cid))
                     try:
-                        Cobb.send_message(settings.master_id, "New chat %s (%s) added to database" % (message.chat.title, cid))
+                        Cobb.send_message(settings.master_id,
+                                          "New chat %s (%s) added to database" % (message.chat.title, cid))
                     except Exception as e:
                         logger.exception(e)
             else:
@@ -266,11 +291,11 @@ def func_add_quote(message):
                          "added": datetime.datetime.now(),
                          "author_id": message.reply_to_message.from_user.id,
                          "author": message.reply_to_message.from_user.username,
-                         "text": message.reply_to_message.text}
+                         "quoted_text": message.reply_to_message.text}
             for key, value in log_entry.items():
                 if log_entry[key] is None:
                     log_entry[key] = ''
-            if log_entry["text"] != "":
+            if log_entry["quoted_text"] != "":
                 with db_messages.atomic():
                     Quotes.create(**log_entry)
                 Cobb.reply_to(message.reply_to_message, "Сообщение успешно сохранено в цитатник.")
@@ -299,11 +324,10 @@ def func_get_quote(message, qid=None):
         logger.exception(e)
 
 
-
 def func_get_all_quote_ids(message):
     try:
         reply_text = "Всего цитат: %s\n" \
-                         "Номера доступных цитат: " % Quotes.select().count()
+                     "Номера доступных цитат: " % Quotes.select().count()
         for quote in Quotes.select():
             reply_text += str(quote.id) + ", "
         Cobb.reply_to(message, reply_text[:-2])
@@ -452,13 +476,13 @@ def bot_status(message):
             text = "CID: %s\n" \
                    "Title: %s\n" \
                    "Link: %s\n" \
-                   "Rules text: %s\n" \
+                   "Rules quoted_text: %s\n" \
                    "Welcome set: %s\n" \
-                   "Welcome text: %s\n" \
-                   "Logging text: %s\n" \
+                   "Welcome quoted_text: %s\n" \
+                   "Logging quoted_text: %s\n" \
                    "Logging pics: %s\n" \
                    "Antibot on: %s\n" \
-                   "Antibot text: %s\n" \
+                   "Antibot quoted_text: %s\n" \
                    "Remove voices: %s" % (query.chat_id, query.chat_title, query.chat_link, query.rules_text,
                                           query.welcome_set, query.welcome_text, query.log_text, query.log_pics,
                                           query.antibot, query.antibot_text, query.rm_voices)
@@ -834,9 +858,10 @@ def bot_modify_karma(message):
 
                         logger.info("%s changed karma in %s" % (message.from_user.id, message.chat.id))
                         func_clean(Cobb.send_message(message.chat.id, "Карма изменена для %s, текущее значение: %s" %
-                                                 (Cobb.get_chat_member(cid, uid).user.first_name,
-                                                  Users.select().where(
-                                                      (Users.user_id == uid) & (Users.chat_id == cid)).get().karma)))
+                                                     (Cobb.get_chat_member(cid, uid).user.first_name,
+                                                      Users.select().where(
+                                                          (Users.user_id == uid) & (
+                                                                  Users.chat_id == cid)).get().karma)))
                         Cobb.delete_message(message.chat.id, message.message_id)
             else:
                 Cobb.reply_to(message, "А дрочить себе карму в приватике нехорошо, не надо так.")
@@ -891,68 +916,71 @@ def bot_moderation(message):
         elif message.from_user.id == message.reply_to_message.from_user.id:
             func_clean(Cobb.reply_to(message, "Эту команду нельзя применить на себя."))
         else:
-                cid = message.chat.id
-                uid = message.reply_to_message.from_user.id
-                target_user = Cobb.get_chat_member(message.chat.id, uid)
-                if target_user.status == "administrator" or target_user.status == "creator":
-                    func_clean(Cobb.reply_to(message, "Эту команду нельзя использовать на модератора/создателя чата!"))
+            cid = message.chat.id
+            uid = message.reply_to_message.from_user.id
+            target_user = Cobb.get_chat_member(message.chat.id, uid)
+            if target_user.status == "administrator" or target_user.status == "creator":
+                func_clean(Cobb.reply_to(message, "Эту команду нельзя использовать на модератора/создателя чата!"))
+            else:
+                if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
+                    func_user_is_not_exists(message)
                 else:
-                    if not Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).exists():
-                        func_user_is_not_exists(message)
-                    else:
-                        func_log_chat_message(message)
-                        cmd = message.text.split(' ')
-                        # ['/warn', '/mute', '/ban', '/unwarn']:
-                        if cmd[0] == '/warn':
-                            updating_user = Users.update(warn_count=Users.warn_count + 1).where(
+                    func_log_chat_message(message)
+                    cmd = message.text.split(' ')
+                    # ['/warn', '/mute', '/ban', '/unwarn']:
+                    if cmd[0] == '/warn':
+                        updating_user = Users.update(warn_count=Users.warn_count + 1).where(
+                            (Users.user_id == uid) & (Users.chat_id == cid))
+                        updating_user.execute()
+                        Cobb.delete_message(cid, message.reply_to_message.message_id)
+                        Cobb.send_message(cid, "Пользователю %s выдано предупреждение, сейчас предупреждений: %s" % (
+                            target_user.user.first_name,
+                            Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).get().warn_count))
+                    if cmd[0] == '/mute':
+                        if not re.match(r'((\d*\s)([dmh])(\s)(.*))', ' '.join(str(message.text).split(' ')[1:])):
+                            func_clean(Cobb.reply_to(message, 'Неверный синтаксис команды, бака!\n'
+                                                              'Правильно: /mute [time] [m/d/h] [причина]'))
+                        else:
+                            mute_time = 60
+                            if cmd[2] == 'd':
+                                mute_time = int(cmd[1]) * 86400
+                            elif cmd[2] == 'h':
+                                mute_time = int(cmd[1]) * 3600
+                            elif cmd[2] == 'm':
+                                mute_time = int(cmd[1]) * 60
+                            mute_until = int(time.time()) + mute_time
+                            Cobb.restrict_chat_member(cid, uid, mute_until, False, False, False, False)
+                            Cobb.delete_message(cid, message.reply_to_message.message_id)
+                            Cobb.send_message(cid, "На пользователя %s наложена молчанка до: %s" % (
+                                target_user.user.first_name,
+                                str(datetime.datetime.utcfromtimestamp(int(mute_until + 10800)).strftime(
+                                    '%Y-%m-%d %H:%M:%S'))))
+
+                    if cmd[0] == '/ban':
+                        if not len(cmd) > 1:
+                            func_clean(Cobb.reply_to(message, 'Необходимо указать причину бана!'))
+                        else:
+                            Cobb.kick_chat_member(cid, uid)
+                            Cobb.delete_message(cid, message.reply_to_message.message_id)
+                            Cobb.send_message(cid, "Пользователь %s был забанен." % target_user.user.first_name)
+
+                    if cmd[0] == '/unwarn':
+                        if Users.select().where(
+                                (Users.user_id == uid) & (Users.chat_id == message.chat.id)).get().warn_count < 1:
+                            func_clean(
+                                Cobb.reply_to(message, "Количество варнов у пользователя не может быть меньше нуля."))
+                        else:
+                            updating_user = Users.update(warn_count=Users.warn_count - 1).where(
                                 (Users.user_id == uid) & (Users.chat_id == cid))
                             updating_user.execute()
-                            Cobb.delete_message(cid, message.reply_to_message.message_id)
-                            Cobb.send_message(cid, "Пользователю %s выдано предупреждение, сейчас предупреждений: %s" % (
-                                target_user.user.first_name,
-                                Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).get().warn_count))
-                        if cmd[0] == '/mute':
-                            if not re.match(r'((\d*\s)([dmh])(\s)(.*))', ' '.join(str(message.text).split(' ')[1:])):
-                                func_clean(Cobb.reply_to(message, 'Неверный синтаксис команды, бака!\n'
-                                                                  'Правильно: /mute [time] [m/d/h] [причина]'))
-                            else:
-                                mute_time = 60
-                                if cmd[2] == 'd':
-                                    mute_time = int(cmd[1]) * 86400
-                                elif cmd[2] == 'h':
-                                    mute_time = int(cmd[1]) * 3600
-                                elif cmd[2] == 'm':
-                                    mute_time = int(cmd[1]) * 60
-                                mute_until = int(time.time()) + mute_time
-                                Cobb.restrict_chat_member(cid, uid, mute_until, False, False, False, False)
-                                Cobb.delete_message(cid, message.reply_to_message.message_id)
-                                Cobb.send_message(cid, "На пользователя %s наложена молчанка до: %s" % (
-                                    target_user.user.first_name,
-                                    str(datetime.datetime.utcfromtimestamp(int(mute_until + 10800)).strftime(
-                                        '%Y-%m-%d %H:%M:%S'))))
-
-                        if cmd[0] == '/ban':
-                            if not len(cmd) > 1:
-                                func_clean(Cobb.reply_to(message, 'Необходимо указать причину бана!'))
-                            else:
-                                Cobb.kick_chat_member(cid, uid)
-                                Cobb.delete_message(cid, message.reply_to_message.message_id)
-                                Cobb.send_message(cid, "Пользователь %s был забанен." % target_user.user.first_name)
-
-                        if cmd[0] == '/unwarn':
-                            if Users.select().where(
-                                    (Users.user_id == uid) & (Users.chat_id == message.chat.id)).get().warn_count < 1:
-                                func_clean(
-                                    Cobb.reply_to(message, "Количество варнов у пользователя не может быть меньше нуля."))
-                            else:
-                                updating_user = Users.update(warn_count=Users.warn_count - 1).where(
-                                    (Users.user_id == uid) & (Users.chat_id == cid))
-                                updating_user.execute()
-                                Cobb.reply_to(message, "C пользователя %s снято предупреждение, сейчас предупреждений: %s" % (
-                                    target_user.user.first_name,
-                                    Users.select().where((Users.user_id == uid) & (Users.chat_id == cid)).get().warn_count))
+                            Cobb.reply_to(message,
+                                          "C пользователя %s снято предупреждение, сейчас предупреждений: %s" % (
+                                              target_user.user.first_name,
+                                              Users.select().where(
+                                                  (Users.user_id == uid) & (Users.chat_id == cid)).get().warn_count))
     else:
         func_clean(Cobb.reply_to(message, "Nope."))
+
 
 @Cobb.edited_message_handler()
 def bot_message_edited(message):
@@ -1115,7 +1143,7 @@ def bot_get_command_list(message):
                                                   "/status - доступно мастеру, статус бота и логи"))
 
 
-@Cobb.message_handler(content_types=['text'])
+@Cobb.message_handler(content_types=['quoted_text'])
 @logger.catch
 def bot_listener(message):
     try:
@@ -1140,6 +1168,7 @@ def bot_listener(message):
 
 
 if __name__ == '__main__':
+
     freeze_support()
 
     Users.create_table()
