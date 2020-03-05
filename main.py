@@ -291,11 +291,11 @@ def func_add_quote(message):
                          "added": datetime.datetime.now(),
                          "author_id": message.reply_to_message.from_user.id,
                          "author": message.reply_to_message.from_user.username,
-                         "quoted_text": message.reply_to_message.text}
+                         "text": message.reply_to_message.text}
             for key, value in log_entry.items():
                 if log_entry[key] is None:
                     log_entry[key] = ''
-            if log_entry["quoted_text"] != "":
+            if log_entry["text"] != "":
                 with db.atomic():
                     Quotes.create(**log_entry)
                 Cobb.reply_to(message.reply_to_message, "Сообщение успешно сохранено в цитатник.")
@@ -476,13 +476,13 @@ def bot_status(message):
             text = "CID: %s\n" \
                    "Title: %s\n" \
                    "Link: %s\n" \
-                   "Rules quoted_text: %s\n" \
+                   "Rules: %s\n" \
                    "Welcome set: %s\n" \
-                   "Welcome quoted_text: %s\n" \
-                   "Logging quoted_text: %s\n" \
+                   "Welcome: %s\n" \
+                   "Logging: %s\n" \
                    "Logging pics: %s\n" \
                    "Antibot on: %s\n" \
-                   "Antibot quoted_text: %s\n" \
+                   "Antibot: %s\n" \
                    "Remove voices: %s" % (query.chat_id, query.chat_title, query.chat_link, query.rules_text,
                                           query.welcome_set, query.welcome_text, query.log_text, query.log_pics,
                                           query.antibot, query.antibot_text, query.rm_voices)
@@ -1171,7 +1171,7 @@ def bot_get_moder_command_list(message):
                                                   "/status - доступно мастеру, статус бота и логи"))
 
 
-@Cobb.message_handler(content_types=['quoted_text'])
+@Cobb.message_handler(content_types=['text'])
 @logger.catch
 def bot_listener(message):
     try:
