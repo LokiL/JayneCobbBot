@@ -486,12 +486,12 @@ def bot_status(message):
                    "Remove voices: %s" % (query.chat_id, query.chat_title, query.chat_link, query.rules_text,
                                           query.welcome_set, query.welcome_text, query.log_text, query.log_pics,
                                           query.antibot, query.antibot_text, query.rm_voices)
-
             dn = os.path.dirname(os.path.realpath(__file__))
             fn = os.path.join(dn, "Cobb.log")
             f = open(fn, 'r')
             Cobb.send_document(message.chat.id, f, caption=text)
             f.close()
+
     except Exception as e:
         print(e)
 
@@ -1026,7 +1026,7 @@ def bot_add_chat_link(message):
         subquery = ChatLinks.select().where(ChatLinks.command == spl[1])
         if not subquery.exists():
             ChatLinks.insert(command=spl[1], text=spl[2]).execute()
-            Cobb.reply_to(message, "Линк %s по команде %s успешно добавлен." % (spl[1], spl[2]))
+            Cobb.reply_to(message, "Команда %s с линком %s успешно добавлена." % (spl[1], spl[2]))
         else:
             ChatLinks.update(text=spl[2]).where(ChatLinks.command == spl[1]).execute()
             Cobb.reply_to(message, "Линк для команды %s изменен на %s" % (spl[1], spl[2]))
