@@ -71,6 +71,11 @@ class Users(Model):
         database = db
 
 
+class UsersNames(Model):
+    user_id = CharField()
+    names = TextField()
+
+
 class MessageLog(Model):
     owner = ForeignKeyField(Users, related_name='messages')
     message_id = IntegerField()
@@ -204,6 +209,20 @@ def func_add_new_user(message, given_uid=None):
 
         logger.info("User @%s (%s) in chat %s (%s) added to db" % (
             message.from_user.username, uid, message.chat.title, cid))
+
+
+@logger.catch
+def func_add_or_update_name_for_user(user_id, chat_id):
+    names = []
+    return names
+    pass
+
+
+@logger.catch
+def func_get_names_for_user(user_id):
+    names = []
+    return names
+    pass
 
 
 @logger.catch
@@ -396,6 +415,30 @@ def func_log_chat_message(message, marked_to_delete=False):
 
 @logger.catch
 def process_garbage_collector():
+    while func_restarter() is None:
+        query = MessageLog.select().where(
+            (MessageLog.message_date < int(time.time()) - settings.time_to_delete_garbage) & (
+                    MessageLog.marked_to_delete == True))
+        if query.exists():
+            for row in query:
+                try:
+                    Cobb.delete_message(row.chat_id, row.message_id)
+                    logger.info("Message %s in %s successfully deleted " % (row.message_id, row.chat_id))
+                except telebot.apihelper.ApiException:
+                    logger.exception(
+                        "Message %s in %s deleting failed, target message was deleted by someone" % (
+                            row.message_id, row.chat_id),
+                        backtrace=False)
+                subquery = MessageLog.update(marked_to_delete=False).where(MessageLog.id == row.id)
+                subquery.execute()
+
+        else:
+            pass
+        time.sleep(30)
+
+
+@logger.catch
+def process_update_usernames():
     while func_restarter() is None:
         query = MessageLog.select().where(
             (MessageLog.message_date < int(time.time()) - settings.time_to_delete_garbage) & (
