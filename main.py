@@ -743,70 +743,28 @@ def bot_message_top(message):
     top_all = "- за все время:\n"
     top_month = "- за последние 30 дней:\n"
     func_log_chat_message(message)
+    if not Chats.get(Chats.chat_id == cid).log_text:
+        func_clean(Cobb.reply_to(message, "К сожалению, поскольку логирование чата отключено, статистика сообщений не ведется."))
+    else:
+        query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
+            MessageLog.chat_id == cid).group_by(
+            MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
+        iter = 1
+        for merged in query:
+            top_all += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
+            iter += 1
 
-    query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
-        MessageLog.chat_id == cid).group_by(
-        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
-    iter = 1
-    for merged in query:
-        top_all += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
-        iter += 1
+        query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
+            (MessageLog.chat_id == cid) & (
+                    MessageLog.message_date > int(time.time()) - 2592000)).group_by(
+            MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
 
-    query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
-        (MessageLog.chat_id == cid) & (
-                MessageLog.message_date > int(time.time()) - 2592000)).group_by(
-        MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
+        iter = 1
+        for merged in query:
+            top_month += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
+            iter += 1
 
-    iter = 1
-    for merged in query:
-        top_month += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
-        iter += 1
-
-    func_clean(Cobb.reply_to(message, top_head + top_all + "\n" + top_month, parse_mode="markdown"))
-
-    # func_add_new_user(message)
-    # func_clean(message)
-    # cid = message.chat.id
-    # top_all = "Топ сообщений у пользователей за все время:\n"
-    # top_month = "Топ сообщений у пользователей за месяц:\n"
-    # top_users = {}
-    # func_log_chat_message(message)
-    #
-    # for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
-    #         MessageLog.chat_id == cid).distinct():
-    #     top_users[unique_users.from_user_username] = MessageLog.select().where(
-    #         (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
-    # iter = 1
-    # for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
-    #     if iter == 6:
-    #         break
-    #     top_all += "``` %s. @%s - %s```\n" % (iter, key, value)
-    #     iter += 1
-    #
-    # for unique_users in MessageLog.select(MessageLog.from_user_id, MessageLog.from_user_username).where(
-    #         (MessageLog.chat_id == cid) & (
-    #                 MessageLog.message_date > int(
-    #             time.time()) - 2629743)).distinct():
-    #     top_users[unique_users.from_user_username] = MessageLog.select().where(
-    #         (MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count()
-    # iter = 1
-    # for key, value in sorted(top_users.items(), key=lambda item: item[1], reverse=True):
-    #     if iter == 6:
-    #         break
-    #     top_month += "``` %s. @%s - %s ```\n" % (iter, key, value)
-    #     iter += 1
-    # func_clean(Cobb.reply_to(message, top_all + "\n" + top_month, parse_mode="markdown"))
-
-    # for us in MessageLog.select(MessageLog.owner, MessageLog.from_user_username).join(Users, JOIN.INNER).where(
-    #         MessageLog.owner == Users.user_id).distinct():
-    #     print(us.owner)
-
-    # print(unique_users.from_user_id)
-    # print(unique_users.from_user_username)
-    # print(MessageLog.select().where((MessageLog.chat_id == cid) & (MessageLog.from_user_id == unique_users.from_user_id)).count())
-
-    # for user_id, user_name in potential_top.items():
-    #     print('%s - %s' % (user_name, MessageLog.select().where((MessageLog.chat_id == cid) & (MessageLog.from_user_id == user_id)).count()))
+        func_clean(Cobb.reply_to(message, top_head + top_all + "\n" + top_month, parse_mode="markdown"))
 
 
 @Cobb.message_handler(content_types=['voice'])
