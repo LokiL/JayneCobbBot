@@ -744,7 +744,8 @@ def bot_message_top(message):
     top_month = "- за последние 30 дней:\n"
     func_log_chat_message(message)
     if not Chats.get(Chats.chat_id == cid).log_text:
-        func_clean(Cobb.reply_to(message, "К сожалению, поскольку логирование чата отключено, статистика сообщений не ведется."))
+        func_clean(Cobb.reply_to(message,
+                                 "К сожалению, поскольку логирование чата отключено, статистика сообщений не ведется."))
     else:
         query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
             MessageLog.chat_id == cid).group_by(
@@ -882,11 +883,13 @@ def bot_modify_karma(message):
                     else:
                         if '/upvote' in message.text:
                             func_karma_change(cid, uid, 1)
+                            karma_info_text = "Карма увеличена для %s, текущее значение: %s"
                         else:
                             func_karma_change(cid, uid, -1)
+                            karma_info_text = "Карма уменьшена для %s, текущее значение: %s"
 
                         logger.info("%s changed karma in %s" % (message.from_user.id, message.chat.id))
-                        func_clean(Cobb.send_message(message.chat.id, "Карма изменена для %s, текущее значение: %s" %
+                        func_clean(Cobb.send_message(message.chat.id, karma_info_text %
                                                      (Cobb.get_chat_member(cid, uid).user.first_name,
                                                       Users.select().where(
                                                           (Users.user_id == uid) & (
