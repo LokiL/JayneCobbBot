@@ -11,6 +11,7 @@ import sys
 import time
 from multiprocessing import Process, freeze_support
 
+
 import telebot
 from loguru import logger
 from peewee import *
@@ -612,8 +613,9 @@ def bot_welcome_trigger(message):
         logger.exception(e)
 
 
+
+@Cobb.message_handler(content_types=["new_chat_members"])
 @logger.catch
-@Cobb.message_handler(content_types=["bot_new_chat_members"])
 def bot_new_chat_members(message):
     try:
         cid = message.chat.id
@@ -622,16 +624,14 @@ def bot_new_chat_members(message):
             func_add_new_chat_or_change_info(message)
         else:
             uid = message.from_user.id
-            incoming_user_username = '@' + Cobb.get_chat_member(cid, uid).user
+            incoming_user_username = '@' + Cobb.get_chat_member(cid, uid).user.username
             query = Chats.select().where(Chats.chat_id == cid).get()
             if Users.select(Users.user_id).where(
                     (Users.chat_id == cid) & (Users.user_id == uid)).exists():
                 if query.welcome_set:
                     func_clean(Cobb.reply_to(message, settings.returning_user_message % incoming_user_username))
             else:
-
                 if query.antibot:
-
                     Cobb.restrict_chat_member(cid, message.new_chat_member.id, int(time.time()), False,
                                               False,
                                               False, False)
@@ -658,7 +658,6 @@ def callback_inline(call):
         cid = call.message.chat.id
         mid = call.message.message_id
         call_dataset = call.data.split("|")
-        print(call_dataset)
         if int(call_dataset[0]) == settings.antibot_callback_code:
             clicking_user = str(call.from_user.id)
 
