@@ -11,7 +11,6 @@ import sys
 import time
 from multiprocessing import Process, freeze_support
 
-
 import telebot
 from loguru import logger
 from peewee import *
@@ -54,7 +53,6 @@ if args.p_adress is not None:
 bot_token = args.token
 Cobb = telebot.TeleBot(bot_token)
 db = SqliteDatabase('JayneCobbDatabase.db', check_same_thread=False)
-# db_messages = SqliteDatabase('JayneCobbDatabase_messages.db', check_same_thread=False)
 
 restart_flag = False
 
@@ -78,7 +76,6 @@ class UsersNames(Model):
 
 
 class MessageLog(Model):
-    owner = ForeignKeyField(Users, related_name='messages')
     message_id = IntegerField()
     message_date = IntegerField()
     message_text = CharField()
@@ -120,6 +117,8 @@ class Chats(Model):
     antibot = BooleanField()
     antibot_text = CharField()
     rm_voices = BooleanField()
+    anticaps = BooleanField()
+    antistickerspam = BooleanField()
 
     class Meta:
         database = db
@@ -369,13 +368,16 @@ def func_rm_quote(message, qid):
 
 def func_log_chat_message(message, marked_to_delete=False):
     try:
-        spl = message.text.split(" ")
-        if spl[0] in ['/warn', '/mute', '/ban', '/unwarn']:
-            mod_command = True
-        else:
+        if message.content_type is 'sticker':
             mod_command = False
+        else:
+            spl = message.text.split(" ")
+            if spl[0] in ['/warn', '/mute', '/ban', '/unwarn']:
+                mod_command = True
+            else:
+                mod_command = False
 
-        log_entry = {'owner': message.from_user.id, 'message_id': message.message_id, 'message_date': message.date,
+        log_entry = {'message_id': message.message_id, 'message_date': message.date,
                      'message_text': message.text,
                      'chat_id': message.chat.id, 'chat_title': message.chat.title,
                      'chat_username': message.chat.username, 'from_user_id': message.from_user.id,
@@ -402,6 +404,8 @@ def func_log_chat_message(message, marked_to_delete=False):
             log_entry['forward_from_user_username'] = message.forward_from.username
             log_entry['forward_user_first_name'] = message.forward_from.first_name
             log_entry['forward_date'] = message.forward_date
+        if message.content_type is 'sticker':
+            log_entry['message_text'] = "sticker|%s|%s" % (message.sticker.emoji, message.sticker.set_name)
 
         if message.edit_date is not None:
             log_entry['message_edit_date'] = message.edit_date
@@ -436,6 +440,33 @@ def process_garbage_collector():
         else:
             pass
         time.sleep(30)
+
+
+@logger.catch
+def process_stickerspam_collector():
+    while func_restarter() is None:
+        for chat in Chats.select():
+            if Chats.get(Chats.chat_id == chat.chat_id).antistickerspam:
+                query = MessageLog.select().where(
+                    (MessageLog.message_date > int(time.time()) - settings.antisticker_timer) & (
+                        MessageLog.message_text.contains('sticker')) & (MessageLog.chat_id == chat.chat_id))
+                if query.count() > settings.antisticker_count:
+                    target_users = []
+                    for stickerspam in query:
+                        status = Cobb.get_chat_member(chat.chat_id, stickerspam.from_user_id).status
+                        if status != "administrator" or status != "creator":
+                            target_users.append(stickerspam.from_user_id)
+                    if len(target_users) > 0:
+                        Cobb.restrict_chat_member(chat.chat_id,
+                                                  target_users[random.randint(0, settings.antisticker_count - 1)],
+                                                  int(time.time()) + 1800, True, True, False, True)
+                        Cobb.send_message(chat.chat_id,
+                                          "Я зафиксировал стикерспам. Поскольку я ленивый, "
+                                          "то честный (почти) рандом решил, что %s лишается права на "
+                                          "использование стикеров (а также гифок и, внезапно, "
+                                          "опросов) на полчаса. Причина - участие в спаме стикерами." % stickerspam.from_user_first_name)
+
+        time.sleep(settings.antisticker_timer)
 
 
 @logger.catch
@@ -611,7 +642,6 @@ def bot_welcome_trigger(message):
             Cobb.reply_to(message, "Nope.")
     except Exception as e:
         logger.exception(e)
-
 
 
 @Cobb.message_handler(content_types=["new_chat_members"])
@@ -803,6 +833,34 @@ def bot_rm_voices_trigger(message):
             Cobb.reply_to(message, "Автоматическое удаление войсов включено.")
 
             logger.info("User @%s (%s) switch on voices deleting in chat %s (%s)" % (
+                uname, uid, title, cid))
+    else:
+        Cobb.reply_to(message, "Nope.")
+
+
+@Cobb.message_handler(commands=['antistickerspam'])
+@logger.catch
+def bot_antistickerspam_trigger(message):
+    uid = message.from_user.id
+    cid = message.chat.id
+    title = message.chat.title
+    uname = message.from_user.username
+    func_have_privileges(message)
+    func_log_chat_message(message)
+    if func_have_privileges(message):
+        if Chats.get(Chats.chat_id == cid).antistickerspam:
+            query = Chats.update(antistickerspam=False).where(Chats.chat_id == cid)
+            query.execute()
+            Cobb.reply_to(message, "Детектирование стикерспама отключено.")
+
+            logger.info("User @%s (%s) switch off stickerspam detect in chat %s (%s)" % (
+                uname, uid, title, cid))
+        else:
+            query = Chats.update(antistickerspam=True).where(Chats.chat_id == cid)
+            query.execute()
+            Cobb.reply_to(message, "Детектирование стикерспама включено.")
+
+            logger.info("User @%s (%s) switch on stickerspam detect in chat %s (%s)" % (
                 uname, uid, title, cid))
     else:
         Cobb.reply_to(message, "Nope.")
@@ -1174,6 +1232,13 @@ def bot_get_moder_command_list(message):
                                                   "/status - доступно мастеру, статус бота и логи"))
 
 
+@Cobb.message_handler(content_types=['sticker'])
+@logger.catch
+def bot__sticker_listener(message):
+    func_log_chat_message(message)
+    pass
+
+
 @Cobb.message_handler(content_types=['text'])
 @logger.catch
 def bot_listener(message):
@@ -1209,6 +1274,8 @@ if __name__ == '__main__':
 
     GarbageCleaner = Process(target=process_garbage_collector, args=())
     GarbageCleaner.start()
+    StickerCollector = Process(target=process_stickerspam_collector, args=())
+    StickerCollector.start()
 
     while True:
         try:
