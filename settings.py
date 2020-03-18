@@ -6,5 +6,5 @@ antibot_welcome_default = "Привет!\nВ этом чате включена 
 welcome_default = "Добро пожаловать в чатик, юзернейм!"
 antibot_passed = "Тест на человека пройден, ограничения на сообщения сняты."
 returning_user_message = "С возвращением, %s!"
-antisticker_timer = 20
+antisticker_timer = 30
 antisticker_count = 6

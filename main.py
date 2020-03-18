@@ -457,14 +457,15 @@ def process_stickerspam_collector():
                         if status != "administrator" or status != "creator":
                             target_users.append(stickerspam.from_user_id)
                     if len(target_users) > 0:
-                        Cobb.restrict_chat_member(chat.chat_id,
-                                                  target_users[random.randint(0, settings.antisticker_count - 1)],
-                                                  int(time.time()) + 1800, True, True, False, True)
+                        selected_user = target_users[random.randint(0, settings.antisticker_count - 1)]
+                        Cobb.restrict_chat_member(chat.chat_id, selected_user, int(time.time()) + 1800, True, True,
+                                                  False, True)
+
                         Cobb.send_message(chat.chat_id,
                                           "Я зафиксировал стикерспам. Поскольку я ленивый, "
                                           "то честный (почти) рандом решил, что %s лишается права на "
                                           "использование стикеров (а также гифок и, внезапно, "
-                                          "опросов) на полчаса. Причина - участие в спаме стикерами." % stickerspam.from_user_first_name)
+                                          "опросов) на полчаса. Причина - участие в спаме стикерами." % Cobb.get_chat_member(chat.chat_id, selected_user).user.first_name)
 
         time.sleep(settings.antisticker_timer)
 
@@ -778,7 +779,7 @@ def bot_message_top(message):
     else:
         query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
             MessageLog.chat_id == cid).group_by(
-            MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
+            MessageLog.from_user_id).order_by(SQL('ct').desc()).limit(10))
         iter = 1
         for merged in query:
             top_all += "``` %s. @%s - %s```\n" % (iter, merged.from_user_username, merged.ct)
@@ -787,7 +788,7 @@ def bot_message_top(message):
         query = (MessageLog.select(MessageLog.from_user_username, fn.COUNT(MessageLog.from_user_id).alias('ct')).where(
             (MessageLog.chat_id == cid) & (
                     MessageLog.message_date > int(time.time()) - 2592000)).group_by(
-            MessageLog.from_user_username).order_by(SQL('ct').desc()).limit(10))
+            MessageLog.from_user_id).order_by(SQL('ct').desc()).limit(10))
 
         iter = 1
         for merged in query:
