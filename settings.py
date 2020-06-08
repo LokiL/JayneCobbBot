@@ -8,3 +8,4 @@ antibot_passed = "Тест на человека пройден, огранич�
 returning_user_message = "С возвращением, %s!"
 antisticker_timer = 30
 antisticker_count = 6
+log_link_requests = True

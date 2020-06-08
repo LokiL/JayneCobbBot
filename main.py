@@ -208,7 +208,8 @@ def func_add_new_user(message, given_uid=None):
                      karma=0).execute()
 
         logger.info("User @%s (%s) in chat %s (%s) added to db" % (
-            message.from_user.username, uid, message.chat.title, cid))
+            "Not @username given" if message.from_user.username is None else message.from_user.username, uid,
+            message.chat.title, cid))
 
 
 @logger.catch
@@ -249,7 +250,9 @@ def func_add_new_chat_or_change_info(message):
                                  antibot_text=settings.antibot_welcome_default,
                                  welcome_set=False,
                                  welcome_text=settings.welcome_default,
-                                 rm_voices=True).execute()
+                                 rm_voices=True,
+                                 anticaps=True,
+                                 antistickerspam=True).execute()
 
                     logger.info("New chat %s (%s) added to database" % (message.chat.title, cid))
                     try:
@@ -465,7 +468,8 @@ def process_stickerspam_collector():
                                           "Я зафиксировал стикерспам. Поскольку я ленивый, "
                                           "то честный (почти) рандом решил, что %s лишается права на "
                                           "использование стикеров (а также гифок и, внезапно, "
-                                          "опросов) на полчаса. Причина - участие в спаме стикерами." % Cobb.get_chat_member(chat.chat_id, selected_user).user.first_name)
+                                          "опросов) на полчаса. Причина - участие в спаме стикерами." % Cobb.get_chat_member(
+                                              chat.chat_id, selected_user).user.first_name)
 
         time.sleep(settings.antisticker_timer)
 
@@ -1192,7 +1196,7 @@ def bot_roll_dice(message):
         uid = message.from_user.id
         func_clean(message)
         func_clean(Cobb.send_message(message.chat.id,
-                                     '@' + Cobb.get_chat_member(cid, uid).user.username + ' rolled ' + str(
+                                     '@' + Cobb.get_chat_member(cid, uid).user.username + ' бросает кости... ' + str(
                                          random.randint(1, 100))))
     except Exception as e:
         logger.exception(e)
@@ -1255,6 +1259,8 @@ def bot_listener(message):
 
             if message.text.startswith("/"):
                 available_links = chatlinks_loader()
+                if settings.log_link_requests:
+                    logger.info("%s in %s requests %s" % (message.from_user.id, message.chat.id, message.text))
                 for key, value in available_links.items():
                     if message.text.startswith(key):
                         func_clean(Cobb.reply_to(message, value))
