@@ -331,9 +331,9 @@ def func_get_quote(message, qid=None):
     try:
         if qid is None:
             query = Quotes.select().order_by(fn.Random()).limit(1).get()
-            reply_text = "%s:\n%s\n\n#%s submitted by %s at %s" % (
+            reply_text = "*%s*:\n%s\n\n_#%s submitted by %s at %s_" % (
                 query.author, query.text, query.id, query.submited_by, query.added)
-            Cobb.reply_to(message, reply_text)
+            Cobb.reply_to(message, reply_text, parse_mode='Markdown')
         else:
             if Quotes.select().where(Quotes.id == qid).exists():
                 query = Quotes.select().where(Quotes.id == qid).get()
@@ -343,6 +343,14 @@ def func_get_quote(message, qid=None):
             else:
                 Cobb.reply_to(message, "Цитаты %s не существует." % qid)
     except Exception as e:
+        logger.exception(e)
+
+def func_get_horoscope():
+    try:
+        query = Quotes.select().order_by(fn.Random()).limit(1).get()
+        return query
+    except Exception as e:
+        return "Exception logged"
         logger.exception(e)
 
 
@@ -538,6 +546,31 @@ def bot_get_quote(message):
         Cobb.reply_to(message, "Номер цитаты невалиден")
     else:
         func_get_quote(message, int(spl[1]))
+
+@Cobb.message_handler(commands=['horoscope'])
+@logger.catch
+def bot_get_quote(message):
+    divination = func_get_horoscope()
+    spells = ["ахалай-махалай",
+              "ляськи-масяськи",
+              "сим-салабим",
+              "пикапу-трикапу",
+              "лорики-ёрики",
+              "снип-снап-снурре",
+              "снурре-базилюрре",
+              "бофара-чуфара",
+              "абра-кадабра",
+              "трах-тибидох",
+              "колдуй бабка, колдуй дед",
+              "флюггегехаймен",
+              "скорики-морики",
+              "крибле-крабле-бумс",
+              "крекс-пекс-фекс",
+              "керальтус-нивус"]
+
+    reply_text = "╰( ͡° ͜ʖ ͡° )つ──☆\n_- %s, %s! Вижу, вижу ответ на твой вопрос!_\n\n*%s:*\n%s" % (random.choice(spells).capitalize(), random.choice(spells),
+    divination.author, divination.text)
+    Cobb.reply_to(message, reply_text,parse_mode='Markdown')
 
 
 @Cobb.message_handler(commands=['allquotes'])
