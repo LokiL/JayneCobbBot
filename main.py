@@ -1221,20 +1221,20 @@ def bot_me(message):
         logger.exception(e)
 
 
-@Cobb.message_handler(commands=['roll'])
-@logger.catch
-def bot_roll_dice(message):
-    try:
-        func_log_chat_message(message)
-
-        cid = message.chat.id
-        uid = message.from_user.id
-        func_clean(message)
-        func_clean(Cobb.send_message(message.chat.id,
-                                     '@' + Cobb.get_chat_member(cid, uid).user.username + ' бросает кости... ' + str(
-                                         random.randint(1, 100))))
-    except Exception as e:
-        logger.exception(e)
+# @Cobb.message_handler(commands=['roll'])
+# @logger.catch
+# def bot_roll_dice(message):
+#     try:
+#         func_log_chat_message(message)
+#
+#         cid = message.chat.id
+#         uid = message.from_user.id
+#         func_clean(message)
+#         func_clean(Cobb.send_message(message.chat.id,
+#                                      '@' + Cobb.get_chat_member(cid, uid).user.username + ' бросает кости... ' + str(
+#                                          random.randint(1, 100))))
+#     except Exception as e:
+#         logger.exception(e)
 
 
 @Cobb.message_handler(commands=['commands'])
@@ -1244,11 +1244,11 @@ def bot_get_command_list(message):
                                                   "/upvote - повысить карму\n"
                                                   "/downvote - понизить карму\n"
                                                   "/rules - вывести правила чата;\n"
-                                                  "/roll - бросок d100\n"
                                                   "/whois - профиль в базе бота\n"
                                                   "/me [что-то] - сообщение вида @твой юзернейм [что-то]\n"
                                                   "/slap - @кто-то - сообщение '@<ты> slaps @<кто-то> around a bit with a large trout'\n"
                                                   "/message_top - топ-5 по сообщениям за все время и за последние 30 дней\n"
+                                                  "/horoscope - гороскоп по цитатам\n"
                                                   "/aquote - реплаем, добавить сообщение в базу цитатника\n"
                                                   "/quote или /quote # - вывести случайную цитату или цитату #\n"
                                                   "/allquotes - вывести список доступных номеров цитат"))
