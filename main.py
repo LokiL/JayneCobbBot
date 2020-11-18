@@ -566,9 +566,11 @@ def bot_get_quote(message):
               "скорики-морики",
               "крибле-крабле-бумс",
               "крекс-пекс-фекс",
-              "керальтус-нивус"]
+              "керальтус-нивус",
+              "бип-боп",
+              "бип-буп"]
 
-    reply_text = "╰( ͡° ͜ʖ ͡° )つ──☆\n_- %s, %s! Вижу, вижу ответ на твой вопрос!_\n\n*%s:*\n%s" % (random.choice(spells).capitalize(), random.choice(spells),
+    reply_text = "╰( ͡° ͜ʖ ͡° )つ──☆\n_- %s, %s! Вижу, вижу судьбу!_\n\n*%s:*\n%s" % (random.choice(spells).capitalize(), random.choice(spells),
     divination.author, divination.text)
     Cobb.reply_to(message, reply_text,parse_mode='Markdown')
 
