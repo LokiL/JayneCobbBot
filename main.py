@@ -390,14 +390,6 @@ def func_rm_quote(message, qid):
 def func_log_chat_message(message, marked_to_delete=False):
     try:
         mod_command = False
-        # if message.content_type is 'sticker':
-        #     mod_command = False
-        # else:
-        #     spl = message.text.split(" ")
-        #     if spl[0] in ['/warn', '/mute', '/ban', '/unwarn']:
-        #         mod_command = True
-        #     else:
-        #         mod_command = False
 
         log_entry = {'message_id': message.message_id, 'message_date': message.date,
                      'message_text': message.text,
@@ -781,7 +773,7 @@ def callback_inline(call):
                 else:
                     Cobb.edit_message_text("Команда отменена", cid, mid)
                 Cobb.answer_callback_query(callback_query_id=call.id, show_alert=False)
-            
+
 
 
 
@@ -1108,6 +1100,8 @@ def allow_deny_list(message):
                         query.execute()
                         func_clean(
                             Cobb.reply_to(message, "Пользователь больше не может контролировать бота в любом чате."))
+                    func_clean(
+                        Cobb.reply_to(message, "Пользователь и так не контролирует меня нигде :<"))
         else:
             func_clean(
                 Cobb.reply_to(message,
@@ -1190,15 +1184,16 @@ def bot_moderation(message):
             elif message.from_user.id == message.reply_to_message.from_user.id:
                 func_clean(Cobb.reply_to(message, "Эту команду нельзя применить на себя."))
             else:
-                cid = message.chat.id
                 target_user_id = message.reply_to_message.from_user.id
                 target_user = Cobb.get_chat_member(message.chat.id, target_user_id)
                 if target_user.status == "administrator" or target_user.status == "creator":
                     func_clean(Cobb.reply_to(message, "Эту команду нельзя использовать на модератора/создателя чата!"))
                 else:
+                    func_log_chat_message(message)
                     mute_markup = InlineKeyboardMarkup()
                     mute_markup.add(InlineKeyboardButton("10 минут", callback_data=func_callback_query_factory(
-                        settings.mute_callback_code, str(target_user_id), str(message.from_user.id), "600")),
+                                        settings.mute_callback_code, str(target_user_id), str(message.from_user.id),
+                                        "600")),
                                     InlineKeyboardButton("1 час", callback_data=func_callback_query_factory(
                                         settings.mute_callback_code, str(target_user_id), str(message.from_user.id),
                                         "3600")),
@@ -1362,58 +1357,6 @@ def bot_me(message):
 
     except Exception as e:
         logger.exception(e)
-
-
-# @Cobb.message_handler(commands=['roll'])
-# @logger.catch
-# def bot_roll_dice(message):
-#     try:
-#         func_log_chat_message(message)
-#
-#         cid = message.chat.id
-#         uid = message.from_user.id
-#         func_clean(message)
-#         func_clean(Cobb.send_message(message.chat.id,
-#                                      '@' + Cobb.get_chat_member(cid, uid).user.username + ' бросает кости... ' + str(
-#                                          random.randint(1, 100))))
-#     except Exception as e:
-#         logger.exception(e)
-
-
-# @Cobb.message_handler(commands=['commands'])
-# @logger.catch
-# def bot_get_command_list(message):
-#     func_clean(Cobb.send_message(message.chat.id, "Общий список команд:\n"
-#                                                   "/upvote - повысить карму\n"
-#                                                   "/downvote - понизить карму\n"
-#                                                   "/rules - вывести правила чата;\n"
-#                                                   "/whois - профиль в базе бота\n"
-#                                                   "/me [что-то] - сообщение вида @твой юзернейм [что-то]\n"
-#                                                   "/slap - @кто-то - сообщение '@<ты> slaps @<кто-то> around a bit with a large trout'\n"
-#                                                   "/message_top - топ-5 по сообщениям за все время и за последние 30 дней\n"
-#                                                   "/horoscope - гороскоп по цитатам\n"
-#                                                   "/aquote - реплаем, добавить сообщение в базу цитатника\n"
-#                                                   "/quote или /quote # - вывести случайную цитату или цитату #\n"
-#                                                   "/allquotes - вывести список доступных номеров цитат"))
-
-
-# @Cobb.message_handler(commands=['moder_commands'])
-# @logger.catch
-# def bot_get_moder_command_list(message):
-#     func_clean(Cobb.send_message(message.chat.id, "Общий список модераторских команд:\n"
-#                                                   "/setrules [текст]- задать правила чата, ограниченный доступ\n"
-#                                                   "/welcome - ограниченный доступ, включить приветственное сообщение\n"
-#                                                   "/antibot - ограниченный доступ, включить антибота\n"
-#                                                   "/rmrules - стереть правила чата, ограниченный доступ\n"
-#                                                   "/mute - [time] [m/d/h] [причина] ответом, ограниченный доступ:  мут на указанное время.\n"
-#                                                   "/ban [причина] ответом, ограниченный доступ: бан юзера\n"
-#                                                   "/warn [причина] ответом, ограниченный доступ: текстовое предупреждение c причиной.\n"
-#                                                   "/unwarn ответом, ограниченный доступ: уменьшить количество варнов юзера на 1\n"
-#                                                   "/title [титул] ответом, изменить титул пользователя, отображается в whois, ограниченный доступ\n"
-#                                                   "/rm_voice ограниченный доступ, отключить/включить удаление войсов в чате\n"
-#                                                   "/rbt - доступно мастеру, перезагрузка бота\n"
-#                                                   "/status - доступно мастеру, статус бота и логи"))
-
 
 @Cobb.message_handler(content_types=['sticker'])
 @logger.catch
