@@ -1208,6 +1208,7 @@ def bot_moderation(message):
                 else:
                     for cid in settings.chat_list:
                         Cobb.kick_chat_member(cid, message.reply_to_message.from_user.id)
+                    Cobb.delete_message(cid, message.reply_to_message.message_id)
                     # Cobb.send_message(message.chat.id, "Иерихон запущен.\n"
                     #                                    "Пользователь забанен во всех чатах системы.\n"
                     #                                    "Выполнение завершено.")
