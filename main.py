@@ -1189,31 +1189,33 @@ def bot_moderation(message):
 def bot_moderation(message):
     try:
         if message.from_user.id == settings.master_id:
-            # # msg = "Система Иерихон запущена.\n"
-            # #
-            # # if message.reply_to_message is None:
-            # #     id_for_ban = message.text.split(' ')[1:]
-            # #     msg+= "Список id для бана: %s\n" % id_for_ban
-            # #     for uid in id_for_ban:
-            # #         for cid in settings.chat_list:
-            # #             Cobb.kick_chat_member(cid, int(uid))
-            # #     msg+= "Выполнение завершено."
-            # #     Cobb.send_message(message.chat.id, msg)
-            # # elif message.from_user.id == message.reply_to_message.from_user.id:
+            # msg = "Система Иерихон запущена.\n"
+            #
             # if message.reply_to_message is None:
-            #     pass
-            # else:
-            #     if message.from_user.id == message.reply_to_message.from_user.id:
-            #         func_clean(Cobb.reply_to(message, "Эту команду нельзя применить на себя."))
-            #     else:
+            #     id_for_ban = message.text.split(' ')[1:]
+            #     msg+= "Список id для бана: %s\n" % id_for_ban
+            #     for uid in id_for_ban:
             #         for cid in settings.chat_list:
-            #             Cobb.kick_chat_member(cid, message.reply_to_message.from_user.id)
-            #         Cobb.send_message(message.chat.id, "Иерихон запущен.\n"
-            #                                            "Пользователь забанен во всех чатах системы.\n"
-            #                                            "Выполнение завершено.")
-            Cobb.send_photo(message.chat.id, 'https://i.ytimg.com/vi/jBfo87raroE/maxresdefault.jpg', caption="Иерихон запущен.\n"
-                                                       "Пользователь забанен во всех чатах системы.\n"
-                                                       "Выполнение завершено.")
+            #             Cobb.kick_chat_member(cid, int(uid))
+            #     msg+= "Выполнение завершено."
+            #     Cobb.send_message(message.chat.id, msg)
+            # elif message.from_user.id == message.reply_to_message.from_user.id:
+            if message.reply_to_message is None:
+                pass
+            else:
+                if message.from_user.id == message.reply_to_message.from_user.id:
+                    func_clean(Cobb.reply_to(message, "Эту команду нельзя применить на себя."))
+                else:
+                    for cid in settings.chat_list:
+                        Cobb.kick_chat_member(cid, message.reply_to_message.from_user.id)
+                    # Cobb.send_message(message.chat.id, "Иерихон запущен.\n"
+                    #                                    "Пользователь забанен во всех чатах системы.\n"
+                    #                                    "Выполнение завершено.")
+                    Cobb.send_photo(message.chat.id, 'https://i.ytimg.com/vi/jBfo87raroE/maxresdefault.jpg',
+                                    caption="Иерихон запущен.\n"
+                                            "Пользователь забанен во всех чатах системы.\n"
+                                            "Выполнение завершено.")
+
         else:
             func_clean(Cobb.reply_to(message, "Нет прав."))
     except Exception as e:
